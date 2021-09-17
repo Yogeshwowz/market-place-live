@@ -1,0 +1,746 @@
+<section class="search_result_page">
+        <div class="row p-0 m-0">
+            <div class="col-lg-4 col-md-12 p-0">
+                <div class="result_left">
+                    <div class="result_left_top">
+                        <h6 class="main_heading px_60 py_20">Filter By</h6>
+                        <!-- Nav tabs -->
+                        <ul class="nav px-3">
+                            <li class="nav-item">
+                              <a class="nav-link filter_btn active" data-toggle="tab" href="#home">Businesses</a>                              
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link filter_btn" data-toggle="tab" href="#menu1">Investors &amp; Buyers</a>                              
+                            </li>
+                        </ul>
+                        <div class="result_left_bottom px_60">
+                            <div class="tab-content">
+                                <div id="home" class="tab-pane active">
+                                    <div class="pt-4 pb-2">
+                                        <label class="form-check-label text_bold pb-2">
+                                            <b><i class="fa fa-briefcase pr-2" aria-hidden="true"></i> You are a(n) </b>
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="checkbox" name="field_1" id="bp" value="1" >Business Owner / Director
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="checkbox" name="field_1" id="mp" value="2">Management Member
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="checkbox" name="field_1" id="pp" value="3">Advisor / Business Broker
+                                        </label>
+                                       
+                                    </div>
+									  <hr class="m-0">
+									   <div class="pt-4 pb-2">
+                                        <label class="form-check-label text_bold pb-2">
+                                            <b><i class="fa fa-briefcase pr-2" aria-hidden="true"></i> You are interested in </b>
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="checkbox" name="interested_in[]" id="bp" value="1" >Full sale of business
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="checkbox" name="interested_in[]" id="mp" value="2">Partial stake sale of business/investment
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="checkbox" name="interested_in[]" id="pp" value="3">Loan for business
+                                        </label>
+                                       
+                                    </div>
+                                    <hr class="m-0">
+                                    <div class="py-2">
+                                        <form class="form-inline py-3 my-lg-0">
+                                        <button class="btn filter_search_btn my-2 my-sm-0" type="submit">Locations<i class="fa fa-map-marker  pl-2" aria-hidden="true"></i></button>
+                                          <input class="filter_search" type="search" placeholder="Filter.." aria-label="Search">                                      
+                                        </form>
+                                       
+                                    </div>
+                                  
+
+                                    <div class="accordion" id="business_drop_filter">
+                                        <div class="drop_filter py-3 bt_1 bb_1">
+                                            <button class="drop_filter_btn p-0" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                <b>Investment Size</b><div class="faq_icon"></div> 
+                                            </button>
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#business_drop_filter">
+                                                <div class="card-body">
+                                                    <p>SGD 11.1 thousand - 7369.7 M</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         
+                                    
+                                        <div class="drop_filter py-3 bb_1">
+                                            <button class="drop_filter_btn p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                                                YEAR ESTABLISHED<div class="faq_icon"></div> 
+                                            </button>
+                                            <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#business_drop_filter">
+                                                <div class="card-body">
+													<select class="js-example-basic-single" name="field_3" id="field_3" required='true'>
+													<option selected disabled hidden style='display: none' value=''></option>
+													<?php for($i=2021; $i>1990;$i--){?>
+													<option value="<?php echo $i;?>" ><?php echo $i;?></option>
+													<?php } ?>
+												</select> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="drop_filter py-3 bb_1">
+                                            <button class="drop_filter_btn p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
+                                                LEGAL ENTITY<div class="faq_icon"></div> 
+                                            </button>
+                                            <div id="collapseseven" class="collapse" aria-labelledby="headingseven" data-parent="#business_drop_filter">
+                                                <div class="card-body">
+                                          <div class="pt-4 pb-2">
+                                        
+                                        <label class="form-check-label text_bold">
+                                            <input type="checkbox" name="field_7[]" id="bp" value="1" >Sole Proprietorship/Sole Trader
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="checkbox" name="field_7[]" id="mp" value="2">General Partnership
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="checkbox" name="field_7[]" id="pp" value="3">Limited Liability Partnership (LLP)
+                                        </label>
+										 <label class="form-check-label text_bold">
+                                            <input type="checkbox" name="field_7[]" id="pp" value="4">Limited Liability Company (LLC)
+                                        </label>
+										 <label class="form-check-label text_bold">
+                                            <input type="checkbox" name="field_7[]" id="pp" value="5">Private Limited Company
+                                        </label>
+                                       
+                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                 
+                                </div>
+                                <div id="menu1" class="tab-pane">
+                                    <div class="pt-4 pb-2">
+                                        <label class="form-check-label text_bold pb-2">
+                                            <b><i class="fa fa-briefcase pr-2" aria-hidden="true"></i> Investor Type</b>
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="radio" name="investor_type" id="bp" value="1" checked="">All
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="radio" name="investor_type" id="mp" value="2">Individuals
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="radio" name="investor_type" id="pp" value="3">Companies
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="radio" name="investor_type" id="up" value="4">Lenders
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="radio" name="investor_type" id="up" value="5">Financial Advisors
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="radio" name="investor_type" id="up" value="6">Funds
+                                        </label>
+                                    </div>
+                                    <div class="py-2">
+                                        <label class="form-check-label text_bold pb-2">
+                                            <b><i class="fa fa-briefcase pr-2" aria-hidden="true"></i> Interested In </b>
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="radio" name="interested_in" id="bp" value="1" checked="">All Transactions
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="radio" name="interested_in" id="mp" value="2">Buying a Businesses
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="radio" name="interested_in" id="pp" value="3">Investing in a Businesses
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="radio" name="interested_in" id="up" value="4">Lending to a Businesses
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <input type="radio" name="interested_in" id="up" value="5">Buying Businesses Assets
+                                        </label>
+                                    </div>
+                                    <hr class="m-0">
+                                    <div class="py-2">
+                                        <form class="form-inline py-3 my-lg-0">
+                                        <button class="btn filter_search_btn my-2 my-sm-0" type="submit">Locations<i class="fa fa-map-marker  pl-2" aria-hidden="true"></i></button>
+                                          <input class="filter_search" type="search" placeholder="Filter.." aria-label="Search">                                      
+                                        </form>
+                                        <div class="">
+                                            <label class="form-check-label text_bold">
+                                                <i class="fa fa-play pr-3" aria-hidden="true"></i><input type="checkbox" class="form-check-input" value="">Africa
+                                            </label>
+                                            <label class="form-check-label text_bold">
+                                                <i class="fa fa-play pr-3" aria-hidden="true"></i><input type="checkbox" class="form-check-input" value="">Asia
+                                            </label>
+                                            <label class="form-check-label text_bold">
+                                                <i class="fa fa-play pr-3" aria-hidden="true"></i><input type="checkbox" class="form-check-input" value="">Europe
+                                            </label>
+                                            <label class="form-check-label text_bold">
+                                                <i class="fa fa-play pr-3" aria-hidden="true"></i><input type="checkbox" class="form-check-input" value="">North America
+                                            </label>
+                                            <label class="form-check-label text_bold">
+                                                <i class="fa fa-play pr-3" aria-hidden="true"></i><input type="checkbox" class="form-check-input" value="">Oceaina
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="py-2">
+                                        <form class="form-inline py-3 my-lg-0">
+                                        <button class="btn filter_search_btn my-2 my-sm-0" type="submit">Industries<i class="fa fa-map-marker  pl-2" aria-hidden="true"></i></button>
+                                          <input class="filter_search" type="search" placeholder="Filter.." aria-label="Search">                                      
+                                        </form>
+                                        <label class="form-check-label text_bold">
+                                            <i class="fa fa-play pr-3" aria-hidden="true"></i><input type="checkbox" class="form-check-input" value="">Building Construction
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <i class="fa fa-play pr-3" aria-hidden="true"></i><input type="checkbox" class="form-check-input" value="">Business Services
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <i class="fa fa-play pr-3" aria-hidden="true"></i><input type="checkbox" class="form-check-input" value="">Education
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <i class="fa fa-play pr-3" aria-hidden="true"></i><input type="checkbox" class="form-check-input" value="">Energy
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <i class="fa fa-play pr-3" aria-hidden="true"></i><input type="checkbox" class="form-check-input" value="">Finance
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <i class="fa fa-play pr-3" aria-hidden="true"></i><input type="checkbox" class="form-check-input" value="">Food &amp; Beverage
+                                        </label>
+                                        <label class="form-check-label text_bold">
+                                            <i class="fa fa-play pr-3" aria-hidden="true"></i><input type="checkbox" class="form-check-input" value="">Healthcare
+                                        </label>
+                                    </div>
+
+                                    <div class="accordion" id="investor_drop_filter">
+                                        <div class="drop_filter py-3 bt_1 bb_1">
+                                            <button class="drop_filter_btn p-0" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                <b>Investment Size</b><div class="faq_icon"></div> 
+                                            </button>
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#investor_drop_filter">
+                                                <div class="card-body">
+                                                    <p>SGD 11.1 thousand</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                          
+                                        <div class="drop_filter py-3 bb_1">  
+                                            <button class="drop_filter_btn p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                RATING<div class="faq_icon"></div> 
+                                            </button>
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#investor_drop_filter">
+                                                <div class="card-body">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="drop_filter py-3 bb_1">
+                                            <button class="drop_filter_btn p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                INVESTOR LOCATION<div class="faq_icon"></div> 
+                                            </button>
+                                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#investor_drop_filter">
+                                                <div class="card-body">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 p-0">
+                <div class="result_right py_20 px_60">    
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane active">
+                            <h5 class="pb-2"><b>Businesses for Sale and Investment Opportunities</b></h5>
+                            <p class="pb-2">Results 1 - 18 of 15623 - Businesses for Sale and Investment Opportunities. Buy or Invest in a Business.</p>
+                            <div class="result_right_body">
+                                <div class="row">
+
+                                    <div class="offset-md-8 col-md-4 col-sm-6 py-3">
+                                        <div class="dropdown sort_by_drop w-100 float-right">
+                                            <button class="btn main_box dropdown-toggle px-4" type="button" id="sort_by" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
+                                            <div class="dropdown-menu" aria-labelledby="sort_by">
+                                                <a class="dropdown-item" href="#">Name</a>
+                                                <a class="dropdown-item" href="#">Date</a>
+                                                <a class="dropdown-item" href="#">Price Low to High</a>
+                                                <a class="dropdown-item" href="#">Price High to Low</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="c_box my-4 w-100">
+                                            <div class="pak_tag z-0">
+                                                <h5>Premium</h5>
+                                            </div>                                                
+                                            <div class="activity_body d-flex flex-column">
+                                                <p class="pb-2">Gym for Sale in Singapore</p>
+                                                <a href="business-single-page.html"><p><b>For Sale: Award-winning well-established Award-winning well-established </b></p></a>  
+                                                <ul class="latest_share w-100 d-flex py-3">
+                                                    <li><a href="#"><i class="fa fa-envelope-o pr-1" aria-hidden="true"></i>Official Email</a></li>
+                                                    <li><a href="#"><i class="fa fa-phone pr-1" aria-hidden="true"></i>Phone</a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin pr-1" aria-hidden="true"></i>Linkedin</a></li>
+                                                    <li><a href="#"><i class="fa fa-google-plus-square pr-1" aria-hidden="true"></i>Google +</a></li>
+                                                </ul>
+                                                <p class="pb-2">Prior to the pandemic, we had at least 100 members registered on average. At present, the gym has recently reopened and we have 40 members; the numbers of registered members are increasing steadily. We have a customer databasve comprising of 800+ members.</p>
+                                                <ul class="latest_share d-flex pt-3 m-0">
+                                                    <li><a href="#"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>Singapore</a></li>
+                                                </ul>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                <p>Run Rate Sales</p>
+                                                <p><span>SGD</span> 1.4 M</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                    <p>EBIDTA Margin</p>
+                                                    <p>25 %</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                    <p>Business for Sale</p>
+                                                    <p><span>SGD</span> 36 k</p>
+                                                </div>
+                                                <a href="business-single-page.html"><button class="user_btn ml-auto mt-3">Contact Business</button></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="c_box my-4 w-100">
+                                            <div class="pak_tag z-0">
+                                                <h5>Premium</h5>
+                                            </div>                                                
+                                            <div class="activity_body d-flex flex-column">
+                                                <p class="pb-2">Gym for Sale in Singapore</p>
+                                                <a href="business-single-page.html"><p><b>For Sale: Award-winning well-established Award-winning well-established </b></p></a>  
+                                                <ul class="latest_share w-100 d-flex py-3">
+                                                    <li><a href="#"><i class="fa fa-envelope-o pr-1" aria-hidden="true"></i>Official Email</a></li>
+                                                    <li><a href="#"><i class="fa fa-phone pr-1" aria-hidden="true"></i>Phone</a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin pr-1" aria-hidden="true"></i>Linkedin</a></li>
+                                                    <li><a href="#"><i class="fa fa-google-plus-square pr-1" aria-hidden="true"></i>Google +</a></li>
+                                                </ul>
+                                                <p class="pb-2">Prior to the pandemic, we had at least 100 members registered on average. At present, the gym has recently reopened and we have 40 members; the numbers of registered members are increasing steadily. We have a customer databasve comprising of 800+ members.</p>
+                                                <ul class="latest_share d-flex pt-3 m-0">
+                                                    <li><a href="#"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>Singapore</a></li>
+                                                </ul>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                <p>Run Rate Sales</p>
+                                                <p><span>SGD</span> 1.4 M</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                    <p>EBIDTA Margin</p>
+                                                    <p>25 %</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                    <p>Business for Sale</p>
+                                                    <p><span>SGD</span> 36 k</p>
+                                                </div>
+                                                <a href="business-single-page.html"><button class="user_btn ml-auto mt-3">Contact Business</button></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="c_box my-4 w-100">
+                                            <div class="pak_tag z-0">
+                                                <h5>Premium</h5>
+                                            </div>                                                
+                                            <div class="activity_body d-flex flex-column">
+                                                <p class="pb-2">Gym for Sale in Singapore</p>
+                                                <a href="business-single-page.html"><p><b>For Sale: Award-winning well-established Award-winning well-established </b></p></a>  
+                                                <ul class="latest_share w-100 d-flex py-3">
+                                                    <li><a href="#"><i class="fa fa-envelope-o pr-1" aria-hidden="true"></i>Official Email</a></li>
+                                                    <li><a href="#"><i class="fa fa-phone pr-1" aria-hidden="true"></i>Phone</a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin pr-1" aria-hidden="true"></i>Linkedin</a></li>
+                                                    <li><a href="#"><i class="fa fa-google-plus-square pr-1" aria-hidden="true"></i>Google +</a></li>
+                                                </ul>
+                                                <p class="pb-2">Prior to the pandemic, we had at least 100 members registered on average. At present, the gym has recently reopened and we have 40 members; the numbers of registered members are increasing steadily. We have a customer databasve comprising of 800+ members.</p>
+                                                <ul class="latest_share d-flex pt-3 m-0">
+                                                    <li><a href="#"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>Singapore</a></li>
+                                                </ul>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                <p>Run Rate Sales</p>
+                                                <p><span>SGD</span> 1.4 M</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                    <p>EBIDTA Margin</p>
+                                                    <p>25 %</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                    <p>Business for Sale</p>
+                                                    <p><span>SGD</span> 36 k</p>
+                                                </div>
+                                                <a href="business-single-page.html"><button class="user_btn ml-auto mt-3">Contact Business</button></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="c_box my-4 w-100">
+                                            <div class="pak_tag z-0">
+                                                <h5>Premium</h5>
+                                            </div>                                                
+                                            <div class="activity_body d-flex flex-column">
+                                                <p class="pb-2">Gym for Sale in Singapore</p>
+                                                <a href="business-single-page.html"><p><b>For Sale: Award-winning well-established Award-winning well-established </b></p></a>  
+                                                <ul class="latest_share w-100 d-flex py-3">
+                                                    <li><a href="#"><i class="fa fa-envelope-o pr-1" aria-hidden="true"></i>Official Email</a></li>
+                                                    <li><a href="#"><i class="fa fa-phone pr-1" aria-hidden="true"></i>Phone</a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin pr-1" aria-hidden="true"></i>Linkedin</a></li>
+                                                    <li><a href="#"><i class="fa fa-google-plus-square pr-1" aria-hidden="true"></i>Google +</a></li>
+                                                </ul>
+                                                <p class="pb-2">Prior to the pandemic, we had at least 100 members registered on average. At present, the gym has recently reopened and we have 40 members; the numbers of registered members are increasing steadily. We have a customer databasve comprising of 800+ members.</p>
+                                                <ul class="latest_share d-flex pt-3 m-0">
+                                                    <li><a href="#"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>Singapore</a></li>
+                                                </ul>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                <p>Run Rate Sales</p>
+                                                <p><span>SGD</span> 1.4 M</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                    <p>EBIDTA Margin</p>
+                                                    <p>25 %</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                    <p>Business for Sale</p>
+                                                    <p><span>SGD</span> 36 k</p>
+                                                </div>
+                                                <a href="business-single-page.html"><button class="user_btn ml-auto mt-3">Contact Business</button></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="c_box my-4 w-100">
+                                            <div class="pak_tag z-0">
+                                                <h5>Premium</h5>
+                                            </div>                                                
+                                            <div class="activity_body d-flex flex-column">
+                                                <p class="pb-2">Gym for Sale in Singapore</p>
+                                                <a href="business-single-page.html"><p><b>For Sale: Award-winning well-established Award-winning well-established </b></p></a>  
+                                                <ul class="latest_share w-100 d-flex py-3">
+                                                    <li><a href="#"><i class="fa fa-envelope-o pr-1" aria-hidden="true"></i>Official Email</a></li>
+                                                    <li><a href="#"><i class="fa fa-phone pr-1" aria-hidden="true"></i>Phone</a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin pr-1" aria-hidden="true"></i>Linkedin</a></li>
+                                                    <li><a href="#"><i class="fa fa-google-plus-square pr-1" aria-hidden="true"></i>Google +</a></li>
+                                                </ul>
+                                                <p class="pb-2">Prior to the pandemic, we had at least 100 members registered on average. At present, the gym has recently reopened and we have 40 members; the numbers of registered members are increasing steadily. We have a customer databasve comprising of 800+ members.</p>
+                                                <ul class="latest_share d-flex pt-3 m-0">
+                                                    <li><a href="#"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>Singapore</a></li>
+                                                </ul>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                <p>Run Rate Sales</p>
+                                                <p><span>SGD</span> 1.4 M</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                    <p>EBIDTA Margin</p>
+                                                    <p>25 %</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                    <p>Business for Sale</p>
+                                                    <p><span>SGD</span> 36 k</p>
+                                                </div>
+                                                <a href="business-single-page.html"><button class="user_btn ml-auto mt-3">Contact Business</button></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="c_box my-4 w-100">
+                                            <div class="pak_tag z-0">
+                                                <h5>Premium</h5>
+                                            </div>                                                
+                                            <div class="activity_body d-flex flex-column">
+                                                <p class="pb-2">Gym for Sale in Singapore</p>
+                                                <a href="business-single-page.html"><p><b>For Sale: Award-winning well-established Award-winning well-established </b></p></a>  
+                                                <ul class="latest_share w-100 d-flex py-3">
+                                                    <li><a href="#"><i class="fa fa-envelope-o pr-1" aria-hidden="true"></i>Official Email</a></li>
+                                                    <li><a href="#"><i class="fa fa-phone pr-1" aria-hidden="true"></i>Phone</a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin pr-1" aria-hidden="true"></i>Linkedin</a></li>
+                                                    <li><a href="#"><i class="fa fa-google-plus-square pr-1" aria-hidden="true"></i>Google +</a></li>
+                                                </ul>
+                                                <p class="pb-2">Prior to the pandemic, we had at least 100 members registered on average. At present, the gym has recently reopened and we have 40 members; the numbers of registered members are increasing steadily. We have a customer databasve comprising of 800+ members.</p>
+                                                <ul class="latest_share d-flex pt-3 m-0">
+                                                    <li><a href="#"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>Singapore</a></li>
+                                                </ul>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                <p>Run Rate Sales</p>
+                                                <p><span>SGD</span> 1.4 M</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                    <p>EBIDTA Margin</p>
+                                                    <p>25 %</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                    <p>Business for Sale</p>
+                                                    <p><span>SGD</span> 36 k</p>
+                                                </div>
+                                                <a href="business-single-page.html"><button class="user_btn ml-auto mt-3">Contact Business</button></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 d-flex justify-content-center align-items-center pt-3">
+                                        <button class="pagination_button">Previous</button>
+                                        <button class="pagination_button">Next</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="menu1" class="tab-pane fade">
+                            <h5 class="pb-2"><b>Investors</b></h5>
+                            <p class="pb-2">Results 1 - 18 of 41696 - Investors. Sell or Finance your Business.</p>
+                            <div class="result_right_body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="c_box my-4 w-100">
+                                            <div class="pak_tag z-0">
+                                                <h5>Premium</h5>
+                                            </div>
+                                            <div class="activity_head d-flex justify-content-between p_20">
+                                                <div class="result_img">
+                                                    <a href="investor-single-page.html"><img class="img-fluid" src="assets/img/user.png"></a>
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-between">
+                                                    <h6>Business Operations Professional</h6>
+                                                    <p>Franchise Investor in Singapore</p>
+                                                </div>
+                                            </div>
+                                            <hr class="latest_line m-0">
+                                            <div class="activity_body d-flex flex-column">
+                                                <ul class="latest_share d-flex pt-3">
+                                                    <li><a href="#"><i class="fa fa-envelope-o pr-2" aria-hidden="true"></i>Official Email</a></li>
+                                                    <li><a href="#"><i class="fa fa-phone pr-2" aria-hidden="true"></i>Phone</a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin pr-2" aria-hidden="true"></i>Linkedin</a></li>
+                                                    <li><a href="#"><i class="fa fa-google-plus-square pr-2" aria-hidden="true"></i>Google +</a></li>
+                                                </ul>
+                                                <p class="pb-2"><b>INTERESTS : </b>Some of your profiles are on hold/complete and they will not be visible to businesses and investors.</p>
+                                                <p class="pb-2"><b>BACKGROUND : </b> Some of your profiles are on hold/incomplete and they will not be visible to businesses . </p>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                <p>Locations</p>
+                                                <p>Singapore +2 more</p>
+                                                </div>
+                                                    <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                        <p>Industries</p>
+                                                        <p>Consulting +28 more</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                        <p>Investment Size</p>
+                                                        <p>SGD 7L - 40L</p>
+                                                    </div>
+                                                <a href="investor-single-page.html"><button class="user_btn ml-auto mt-3">Contact Business</button></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="c_box my-4 w-100">
+                                            <div class="pak_tag z-0">
+                                                <h5>Premium</h5>
+                                            </div>
+                                            <div class="activity_head d-flex justify-content-between p_20">
+                                                <div class="result_img">
+                                                    <a href="investor-single-page.html"><img class="img-fluid" src="assets/img/user.png"></a>
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-between">
+                                                    <h6>Business Operations Professional</h6>
+                                                    <p>Franchise Investor in Singapore</p>
+                                                </div>
+                                            </div>
+                                            <hr class="latest_line m-0">
+                                            <div class="activity_body d-flex flex-column">
+                                                <ul class="latest_share d-flex pt-3">
+                                                    <li><a href="#"><i class="fa fa-envelope-o pr-2" aria-hidden="true"></i>Official Email</a></li>
+                                                    <li><a href="#"><i class="fa fa-phone pr-2" aria-hidden="true"></i>Phone</a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin pr-2" aria-hidden="true"></i>Linkedin</a></li>
+                                                    <li><a href="#"><i class="fa fa-google-plus-square pr-2" aria-hidden="true"></i>Google +</a></li>
+                                                </ul>
+                                                <p class="pb-2"><b>INTERESTS : </b>Some of your profiles are on hold/complete and they will not be visible to businesses and investors.</p>
+                                                <p class="pb-2"><b>BACKGROUND : </b> Some of your profiles are on hold/incomplete and they will not be visible to businesses . </p>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                <p>Locations</p>
+                                                <p>Singapore +2 more</p>
+                                                </div>
+                                                    <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                        <p>Industries</p>
+                                                        <p>Consulting +28 more</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                        <p>Investment Size</p>
+                                                        <p>SGD 7L - 40L</p>
+                                                    </div>
+                                                <a href="investor-single-page.html"><button class="user_btn ml-auto mt-3">Contact Business</button></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="c_box my-4 w-100">
+                                            <div class="pak_tag z-0">
+                                                <h5>Premium</h5>
+                                            </div>
+                                            <div class="activity_head d-flex justify-content-between p_20">
+                                                <div class="result_img">
+                                                    <a href="investor-single-page.html"><img class="img-fluid" src="assets/img/user.png"></a>
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-between">
+                                                    <h6>Business Operations Professional</h6>
+                                                    <p>Franchise Investor in Singapore</p>
+                                                </div>
+                                            </div>
+                                            <hr class="latest_line m-0">
+                                            <div class="activity_body d-flex flex-column">
+                                                <ul class="latest_share d-flex pt-3">
+                                                    <li><a href="#"><i class="fa fa-envelope-o pr-2" aria-hidden="true"></i>Official Email</a></li>
+                                                    <li><a href="#"><i class="fa fa-phone pr-2" aria-hidden="true"></i>Phone</a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin pr-2" aria-hidden="true"></i>Linkedin</a></li>
+                                                    <li><a href="#"><i class="fa fa-google-plus-square pr-2" aria-hidden="true"></i>Google +</a></li>
+                                                </ul>
+                                                <p class="pb-2"><b>INTERESTS : </b>Some of your profiles are on hold/complete and they will not be visible to businesses and investors.</p>
+                                                <p class="pb-2"><b>BACKGROUND : </b> Some of your profiles are on hold/incomplete and they will not be visible to businesses . </p>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                <p>Locations</p>
+                                                <p>Singapore +2 more</p>
+                                                </div>
+                                                    <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                        <p>Industries</p>
+                                                        <p>Consulting +28 more</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                        <p>Investment Size</p>
+                                                        <p>SGD 7L - 40L</p>
+                                                    </div>
+                                                <a href="investor-single-page.html"><button class="user_btn ml-auto mt-3">Contact Business</button></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="c_box my-4 w-100">
+                                            <div class="pak_tag z-0">
+                                                <h5>Premium</h5>
+                                            </div>
+                                            <div class="activity_head d-flex justify-content-between p_20">
+                                                <div class="result_img">
+                                                    <a href="investor-single-page.html"><img class="img-fluid" src="assets/img/user.png"></a>
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-between">
+                                                    <h6>Business Operations Professional</h6>
+                                                    <p>Franchise Investor in Singapore</p>
+                                                </div>
+                                            </div>
+                                            <hr class="latest_line m-0">
+                                            <div class="activity_body d-flex flex-column">
+                                                <ul class="latest_share d-flex pt-3">
+                                                    <li><a href="#"><i class="fa fa-envelope-o pr-2" aria-hidden="true"></i>Official Email</a></li>
+                                                    <li><a href="#"><i class="fa fa-phone pr-2" aria-hidden="true"></i>Phone</a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin pr-2" aria-hidden="true"></i>Linkedin</a></li>
+                                                    <li><a href="#"><i class="fa fa-google-plus-square pr-2" aria-hidden="true"></i>Google +</a></li>
+                                                </ul>
+                                                <p class="pb-2"><b>INTERESTS : </b>Some of your profiles are on hold/complete and they will not be visible to businesses and investors.</p>
+                                                <p class="pb-2"><b>BACKGROUND : </b> Some of your profiles are on hold/incomplete and they will not be visible to businesses . </p>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                <p>Locations</p>
+                                                <p>Singapore +2 more</p>
+                                                </div>
+                                                    <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                        <p>Industries</p>
+                                                        <p>Consulting +28 more</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                        <p>Investment Size</p>
+                                                        <p>SGD 7L - 40L</p>
+                                                    </div>
+                                                <a href="investor-single-page.html"><button class="user_btn ml-auto mt-3">Contact Business</button></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="c_box my-4 w-100">
+                                            <div class="pak_tag z-0">
+                                                <h5>Premium</h5>
+                                            </div>
+                                            <div class="activity_head d-flex justify-content-between p_20">
+                                                <div class="result_img">
+                                                    <a href="investor-single-page.html"><img class="img-fluid" src="assets/img/user.png"></a>
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-between">
+                                                    <h6>Business Operations Professional</h6>
+                                                    <p>Franchise Investor in Singapore</p>
+                                                </div>
+                                            </div>
+                                            <hr class="latest_line m-0">
+                                            <div class="activity_body d-flex flex-column">
+                                                <ul class="latest_share d-flex pt-3">
+                                                    <li><a href="#"><i class="fa fa-envelope-o pr-2" aria-hidden="true"></i>Official Email</a></li>
+                                                    <li><a href="#"><i class="fa fa-phone pr-2" aria-hidden="true"></i>Phone</a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin pr-2" aria-hidden="true"></i>Linkedin</a></li>
+                                                    <li><a href="#"><i class="fa fa-google-plus-square pr-2" aria-hidden="true"></i>Google +</a></li>
+                                                </ul>
+                                                <p class="pb-2"><b>INTERESTS : </b>Some of your profiles are on hold/complete and they will not be visible to businesses and investors.</p>
+                                                <p class="pb-2"><b>BACKGROUND : </b> Some of your profiles are on hold/incomplete and they will not be visible to businesses . </p>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                <p>Locations</p>
+                                                <p>Singapore +2 more</p>
+                                                </div>
+                                                    <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                        <p>Industries</p>
+                                                        <p>Consulting +28 more</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                        <p>Investment Size</p>
+                                                        <p>SGD 7L - 40L</p>
+                                                    </div>
+                                                <a href="investor-single-page.html"><button class="user_btn ml-auto mt-3">Contact Business</button></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="c_box my-4 w-100">
+                                            <div class="pak_tag z-0">
+                                                <h5>Premium</h5>
+                                            </div>
+                                            <div class="activity_head d-flex justify-content-between p_20">
+                                                <div class="result_img">
+                                                    <a href="investor-single-page.html"><img class="img-fluid" src="assets/img/user.png"></a>
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-between">
+                                                    <h6>Business Operations Professional</h6>
+                                                    <p>Franchise Investor in Singapore</p>
+                                                </div>
+                                            </div>
+                                            <hr class="latest_line m-0">
+                                            <div class="activity_body d-flex flex-column">
+                                                <ul class="latest_share d-flex pt-3">
+                                                    <li><a href="#"><i class="fa fa-envelope-o pr-2" aria-hidden="true"></i>Official Email</a></li>
+                                                    <li><a href="#"><i class="fa fa-phone pr-2" aria-hidden="true"></i>Phone</a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin pr-2" aria-hidden="true"></i>Linkedin</a></li>
+                                                    <li><a href="#"><i class="fa fa-google-plus-square pr-2" aria-hidden="true"></i>Google +</a></li>
+                                                </ul>
+                                                <p class="pb-2"><b>INTERESTS : </b>Some of your profiles are on hold/complete and they will not be visible to businesses and investors.</p>
+                                                <p class="pb-2"><b>BACKGROUND : </b> Some of your profiles are on hold/incomplete and they will not be visible to businesses . </p>
+                                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                <p>Locations</p>
+                                                <p>Singapore +2 more</p>
+                                                </div>
+                                                    <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                        <p>Industries</p>
+                                                        <p>Consulting +28 more</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                                        <p>Investment Size</p>
+                                                        <p>SGD 7L - 40L</p>
+                                                    </div>
+                                                <a href="investor-single-page.html"><button class="user_btn ml-auto mt-3">Contact Business</button></a>
+                                            </div> 
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 d-flex justify-content-center align-items-center pt-3">
+                                        <button class="pagination_button">Previous</button>
+                                        <button class="pagination_button">Next</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

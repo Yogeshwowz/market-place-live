@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MVP</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=1.1">
+    
+  </head>
+  <body>
+
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light" id="main_header">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Logo</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="buyer-profile.html">Buyer</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="seller-profile.html">Seller</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="investor-profile.html">Investor</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact</a>
+                      </li>
+                    </ul>
+                    <div class="ml-auto d-flex align-items-center">
+                        <ul class="navbar-nav User_nav_login d-none">
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html"><i class="fa fa-lock" aria-hidden="true"></i> Login</a>
+                            </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">|</a>
+                              </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html"><i class="fa fa-user" aria-hidden="true"></i> Register</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">                        
+                            <input class="mr-sm-2 nav_search ml-md-3" type="search" placeholder="Businesses for sale in Singapore" aria-label="Search">
+                            <a href="search-result.html" class="btn nav_search_btn my-2 my-sm-0"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </form>
+                        <div class="dropdown mr-1">
+                                <button class="btn bg_main text-white dropdown-toggle px-4" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Profile</button>
+                                <div class="dropdown-menu profile_dropdown p-0" aria-labelledby="dropdownMenuButton">
+                                    <div class="row p-3">
+                                        <div class="col-md-4 pr-0">
+                                            <div class="drop_profile_img">
+                                                <!-- <img class="profile_img w-100" src="assets/img/user.png"> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p>name name</p>
+                                            <p class="color_blue">example123@gmail.com</p>
+                                            <a class="save_change d-block text-center bg_main br_10 p-2 mt-2" href="dashboard.html">My Dashboard</a>
+                                        </div>
+                                    </div>
+                                    <a class="dropdown-item" href="invoices.html"><i class="fa fa-calculator pr-2" aria-hidden="true"></i>Invoices</a>
+                                    <a class="dropdown-item" href="bookmark.html"><i class="fa fa-bookmark pr-2" aria-hidden="true"></i>Bookmarks & History</a>
+                                    <a class="dropdown-item" href="notifications.html"><i class="fa fa-bell pr-2" aria-hidden="true"></i>Notification</a>
+                                    <a class="dropdown-item" href="setting.html"><i class="fa fa-bell pr-2" aria-hidden="true"></i>Settings</a>
+                                    <a class="dropdown-item" href="index.html"><i class="fa fa-minus-circle pr-2" aria-hidden="true"></i>Logout</a>
+                                </div>
+                            </div>
+                            <div class="login_user d-flex justify-content-center align-items-center">
+                                <img class="" src="assets/img/user.png">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page_body">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <div class="row main_box p_20 mr_20">
+                        <div class="col-md-4 profile_img">
+                            <img class="img-fluid" src="assets/img/user.png">
+                        </div>
+                        <div class="col-md-8">
+                            <h4 class="m-0">name name</h4>
+                            <p class="pb-2 border_bottom">example123@gmail.com</p>
+                            <button class="main_btn mt-2 py-2">No Active Profile</button>
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-between pt-4 pb-3">
+                            <h6>Profile</h6>
+                            <h6>Buyer/Seller/Investor</h6>
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-between pb-3">
+                            <h6>Locations</h6>
+                            <h6>Singapore</h6>
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-between pb-4">
+                            <h6>Free Trial</h6>
+                            <h6></h6>
+                        </div>
+                        <div class="col-md-12">
+                            <hr class="profile_line">
+                        </div>                        
+                        <div class="col-md-12 d-flex justify-content-between pt-4 pb-3">
+                            <p><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>Singapore</p>
+                            <p>Joined Sept. 10,2020</p>
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-between  pb-3">                            
+                            <p>Linkedin</p>
+                            <p>Facebook</p>
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-between pb-4">
+                            <p>Google</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12"> 
+                    <div class="main_box mb-4">
+                        <div class="p_20 px_40 bg_main">
+                            <h4>Bookmarks</h4>
+                        </div>
+                        <div class="box_body p_20 px_40">
+                            <p>You have not shortlisted any profiles yet.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg_main px_40 py-3 br_10 mb-4">
+                        <h4 class="m-0">Bookmarks</h4>
+                    </div>
+
+                    <div class="main_box my-4 w-100">
+                        <div class="activity_body d-flex flex-column p_20 px_40">
+                            <a href="business-single-page.html"><h5 class="color_blue w_88">Component manufacturers for a range of industries run by highly qualified and experienced promoters.</h5></a>
+                            <div class="row my-4">
+                                <div class="col-md-3 pr-md-4">
+                                    <a href="business-single-page.html"><img class="img-fluid" src="assets/img/about-us.jpg"></a>
+                                </div>
+                                <div class="col-md-8 pl-md-4">
+                                    <p><b>Description : </b>Family owned business established in 1969 engaged in manufacturing industry. - An ISO 9001:2008 & TS 16949 certified company recognized by the industry for quality and delivery excellence.</p>
+                                    <div class="d-flex justify-content-between pt-4">
+                                        <div class="left_side">
+                                            <h5>Full Sale</h5>
+                                            <p>SGD 25 M</p>
+                                        </div>
+                                        <div class="right_side pr-1">
+                                            <h5>Run Rate Revenue</h5>
+                                            <p>SGD 24 M @ 20 % EBITDA</p>
+                                        </div>                                
+                                    </div>
+                                </div>
+                            </div>                            
+                            <button class="user_btn ml-auto my-2"><a href="business-single-page.html">Contact Business</a></button>
+                        </div> 
+                    </div>
+
+                    <div class="main_box my-4 w-100">
+                        <div class="activity_body d-flex flex-column p_20 px_40">
+                            <a href="business-single-page.html"><h5 class="color_blue w_88">Component manufacturers for a range of industries run by highly qualified and experienced promoters.</h5></a>
+                            <div class="row my-4">
+                                <div class="col-md-3 pr-md-4">
+                                    <a href="business-single-page.html"><img class="img-fluid" src="assets/img/about-us.jpg"></a>
+                                </div>
+                                <div class="col-md-8 pl-md-4">
+                                    <p><b>Description : </b>Family owned business established in 1969 engaged in manufacturing industry. - An ISO 9001:2008 & TS 16949 certified company recognized by the industry for quality and delivery excellence.</p>
+                                    <div class="d-flex justify-content-between pt-4">
+                                        <div class="left_side">
+                                            <h5>Full Sale</h5>
+                                            <p>SGD 25 M</p>
+                                        </div>
+                                        <div class="right_side pr-1">
+                                            <h5>Run Rate Revenue</h5>
+                                            <p>SGD 24 M @ 20 % EBITDA</p>
+                                        </div>                                
+                                    </div>
+                                </div>
+                            </div>                            
+                            <button class="user_btn ml-auto my-2"><a href="business-single-page.html">Contact Business</a></button>
+                        </div> 
+                    </div>
+
+                    <div class="main_box my-4 w-100">
+                        <div class="activity_body d-flex flex-column p_20 px_40">
+                            <a href="business-single-page.html"><h5 class="color_blue w_88">Component manufacturers for a range of industries run by highly qualified and experienced promoters.</h5></a>
+                            <div class="row my-4">
+                                <div class="col-md-3 pr-md-4">
+                                    <a href="business-single-page.html"><img class="img-fluid" src="assets/img/about-us.jpg"></a>
+                                </div>
+                                <div class="col-md-8 pl-md-4">
+                                    <p><b>Description : </b>Family owned business established in 1969 engaged in manufacturing industry. - An ISO 9001:2008 & TS 16949 certified company recognized by the industry for quality and delivery excellence.</p>
+                                    <div class="d-flex justify-content-between pt-4">
+                                        <div class="left_side">
+                                            <h5>Full Sale</h5>
+                                            <p>SGD 25 M</p>
+                                        </div>
+                                        <div class="right_side pr-1">
+                                            <h5>Run Rate Revenue</h5>
+                                            <p>SGD 24 M @ 20 % EBITDA</p>
+                                        </div>                                
+                                    </div>
+                                </div>
+                            </div>                            
+                            <button class="user_btn ml-auto my-2"><a href="business-single-page.html">Contact Business</a></button>
+                        </div> 
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="upper_footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4>Company</h4>
+                        <ul class="footer_list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="about-us.html">How To?</a></li>
+                            <li><a href="about-us.html">Blog</a></li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                        </ul>
+                    </div>                           
+                    <div class="col-md-3">
+                        <h4>Get Started</h4>
+                        <ul class="footer_list">
+                            <li><a href="seller-profile.html">Sell your Business</a></li>
+                            <li><a href="buyer-profile.html">Buy a Business</a></li>
+                            <li><a href="investor-profile.html">Invest in a Business</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h4>Follow Us </h4>
+                        <ul class="footer_list follow_us_list d-flex justify-content-between mt-md-2">
+                            <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        </ul>                                
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="pb-4">Let's have a chat !</h4>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter your E-mail" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-success" type="button" id="button-addon2"> <b>Submit</b></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lower_footer">
+            <p class="m-0 text-white text-center">Copyright © 2020 xyz Online Services Private Limited. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="assets/js/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/js/customJS.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

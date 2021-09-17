@@ -1,0 +1,438 @@
+<?php if(!defined('BASEPATH')) exit('No direct script access allowed');
+
+class Dashboard_model extends CI_Model{
+    
+    protected $users = 'users';
+    protected $countries = 'countries';
+	protected $profile = 'profile';
+	protected $profile_gallery_images_docs = 'profile_gallery_images_docs';
+	protected $business_industry = 'business_industry';
+	public function __construct(){
+			parent::__construct();
+			$this->load->database();
+	}
+    
+   function getUserById(){
+		$select =$this->users.".*,".$this->countries.".name as countryName";	   
+		$this->db->select($select);
+		$this->db->from($this->users);
+		$this->db->join($this->countries, $this->countries.'.id =' .$this->users.'.country_id','left');
+		$this->db->where($this->users.'.id', $this->session->userdata('uid'));
+		$query = $this->db->get();
+		return $query->row_array();
+    }
+	public function updateProfile(){
+		
+		 /*if(!empty($_FILES['add_photo']["name"])){
+				$ext = pathinfo($_FILES['add_photo']["name"]);
+				$fileName = rand().'-'.time().'.'.$ext['extension'];
+				$_FILES['add_photo']["name"]= 'gallery-'.$fileName;
+				$add_photo = $_FILES['add_photo']["name"];
+				$config['upload_path'] = './assets/upload/gallery/';
+			    $config['allowed_types'] = 'gif|jpg|png';
+				$this->load->library('upload', $config);
+				if(!$this->upload->do_upload('add_photo')){
+				$errors =  array('error' => $this->upload->display_errors());
+				$array['error'] = $errors;
+				}else{
+					$data =  array('upload_data' => $this->upload->data());
+				}
+		   }
+		   if(!empty($_FILES['add_documents']["name"])){
+				$ext = pathinfo($_FILES['add_documents']["name"]);
+				$fileName = rand().'-'.time().'.'.$ext['extension'];
+				$_FILES['add_documents']["name"]= 'gallery-'.$fileName;
+				$add_documents = $_FILES['add_documents']["name"];
+				$config['upload_path'] = './assets/upload/gallery/';
+			    $config['allowed_types'] = 'gif|jpg|png';
+				$this->load->library('upload', $config);
+				if(!$this->upload->do_upload('add_documents')){
+				$errors =  array('error' => $this->upload->display_errors());
+				$array['error'] = $errors;
+				}else{
+					$data =  array('upload_data' => $this->upload->data());
+				}
+		   }
+		    if(!empty($_FILES['attach_proof']["name"])){
+				$ext = pathinfo($_FILES['attach_proof']["name"]);
+				$fileName = rand().'-'.time().'.'.$ext['extension'];
+				$_FILES['attach_proof']["name"]= 'gallery-'.$fileName;
+				$attach_proof = $_FILES['attach_proof']["name"];
+				$config['upload_path'] = './assets/upload/gallery/';
+			    $config['allowed_types'] = 'gif|jpg|png';
+				$this->load->library('upload', $config);
+				if(!$this->upload->do_upload('attach_proof')){
+				$errors =  array('error' => $this->upload->display_errors());
+				$array['error'] = $errors;
+				}else{
+					$data =  array('upload_data' => $this->upload->data());
+				}
+		   }
+		   if(!empty($_FILES['company_logo']["name"])){
+				$ext = pathinfo($_FILES['company_logo']["name"]);
+				$fileName = rand().'-'.time().'.'.$ext['extension'];
+				$_FILES['company_logo']["name"]= 'gallery-'.$fileName;
+				$company_logo = $_FILES['company_logo']["name"];
+				$config['upload_path'] = './assets/upload/gallery/';
+			    $config['allowed_types'] = 'gif|jpg|png';
+				$this->load->library('upload', $config);
+				if(!$this->upload->do_upload('company_logo')){
+				$errors =  array('error' => $this->upload->display_errors());
+				$array['error'] = $errors;
+				}else{
+					$data =  array('upload_data' => $this->upload->data());
+				}
+		   }*/
+		   if(!empty($_POST['your_name'])){$your_name =$_POST['your_name']; }else{$your_name ='';}
+		   if(!empty($_POST['mobile_number'])){
+			   $mobile_number =$_POST['mobile_number']; }else{$mobile_number ='';}
+		   if(!empty($_POST['official_email'])){$official_email =$_POST['official_email']; }else{$official_email ='';}
+		   if(!empty($_POST['company_name'])){$company_name =$_POST['company_name']; }else{$company_name ='';}
+		   if(!empty($_POST['interested_in'])){$interested_in =$_POST['interested_in']; }else{$interested_in ='';}
+		     if(!empty($_POST['your_company'])){$your_company =$_POST['your_company']; }else{$your_company ='';}
+			   
+		   if(!empty($_POST['field_1'])){$field_1 =$_POST['field_1']; }else{$field_1 ='';}
+		   if(!empty($_POST['field_2'])){$field_2 =$_POST['field_2']; }else{$field_2 ='';}
+		   if(!empty($_POST['field_3'])){$field_3 =$_POST['field_3']; }else{$field_3 ='';}
+		   if(!empty($_POST['field_4'])){$field_4 =$_POST['field_4']; }else{$field_4 ='';}
+		   if(!empty($_POST['field_5'])){$field_5 =$_POST['field_5']; }else{$field_5 ='';}
+		   if(!empty($_POST['field_6'])){$field_6 =$_POST['field_6']; }else{$field_6 ='';}
+		   if(!empty($_POST['field_7'])){$field_7 =$_POST['field_7']; }else{$field_7 ='';}
+		   if(!empty($_POST['field_8'])){$field_8 =$_POST['field_8']; }else{$field_8 ='';}
+		   if(!empty($_POST['field_9'])){$field_9 =$_POST['field_9']; }else{$field_9 ='';}
+		   if(!empty($_POST['field_10'])){$field_10 =$_POST['field_10']; }else{$field_10 ='';}
+		   if(!empty($_POST['field_11'])){$field_11 =$_POST['field_11']; }else{$field_11 ='';}
+		   if(!empty($_POST['field_12'])){$field_12 =$_POST['field_12']; }else{$field_12 ='';}
+		   if(!empty($_POST['field_13'])){$field_13 =$_POST['field_13']; }else{$field_13 ='';}
+		   if(!empty($_POST['field_14'])){$field_14 =$_POST['field_14']; }else{$field_14 ='';}
+		   if(!empty($_POST['field_15'])){$field_15 =$_POST['field_15']; }else{$field_15 ='';}
+		   if(!empty($_POST['field_16'])){$field_16 =$_POST['field_16']; }else{$field_16 ='';}
+		   if(!empty($_POST['tentative_selling'])){$tentative_selling =$_POST['tentative_selling']; }else{$tentative_selling ='';}
+		   if(!empty($_POST['reason_for_sale'])){$reason_for_sale =$_POST['reason_for_sale']; }else{$reason_for_sale ='';}
+		   if(!empty($_POST['investmentto'])){$investmentto =$_POST['investmentto']; }else{$investmentto ='';}
+		   $data = array(
+							'first_name' => $your_name,
+							'user_phone' => $mobile_number
+						);
+			$this->db->where('id', $this->session->userdata('uid'));		  
+            $this->db->update($this->users, $data);
+			
+			 $updatedata = array(
+							'official_email' => $official_email,
+							'field_1' => $field_1,
+							
+							'field_3' => $field_3,
+							
+							'field_5' => $field_5,
+							'field_6' => $field_6,
+							'field_7' => $field_7,
+							'field_8' => $field_8,
+							'field_9' => $field_9
+							
+						);
+			if($this->session->userdata('role')==1 || $this->session->userdata('role')==2){
+
+				 $updatedata['interested_in'] = $interested_in;
+				 $updatedata['your_company'] = $your_company;
+				 $updatedata['investmentto'] = $investmentto;
+				 $updatedata['field_4'] = $field_4;
+				 $updatedata['field_2'] = serialize($field_2);
+			}			
+			if($this->session->userdata('role')==3){
+				$updatedata['field_4'] = serialize($field_4);
+				$updatedata['company_name'] = $company_name;
+				$updatedata['interested_in'] = $interested_in;
+				$updatedata['field_10'] = $field_10;
+				$updatedata['field_11'] = $field_11;
+				$updatedata['field_12'] = $field_12;
+				$updatedata['field_13'] = $field_13;
+				$updatedata['field_14'] = $field_14;
+				$updatedata['field_15'] = $field_15;
+				$updatedata['field_16'] = $field_16;
+				$updatedata['tentative_selling'] = $tentative_selling;
+				$updatedata['reason_for_sale'] = $reason_for_sale;
+				
+				
+			}
+		   $this->db->where('user_id', $this->session->userdata('uid'));		  
+           return  $this->db->update($this->profile, $updatedata);
+    }
+	function getUserProfileById(){
+		$select =$this->users.".*,".$this->profile.".*";	   
+		$this->db->select($select);
+		$this->db->from($this->profile);
+		$this->db->join($this->users, $this->users.'.id =' .$this->profile.'.user_id','left');
+		$this->db->where($this->profile.'.user_id', $this->session->userdata('uid'));
+		$query = $this->db->get();
+		return $query->row_array();
+    }
+	function cImageGallery(){
+	
+		$user_id = $this->session->userdata('uid');
+		$array = array();
+		$img = '';
+		set_time_limit(0);
+		ini_set('memory_limit', '-1');
+		if(!empty($_FILES['userfile']["name"])){
+		 $ext = pathinfo($_FILES['userfile']["name"]);
+			$fileName = rand().'-'.time().'.'.$ext['extension'];
+			$_FILES['userfile']["name"]= 'gallery-'.$fileName;
+			//Upload Image
+			$config['upload_path'] = './assets/upload/gallery/';
+			$config['allowed_types'] = 'gif|jpg|png|pdf|docx|doc';
+			
+			$this->load->library('upload', $config);
+			if(!$this->upload->do_upload('userfile')){
+				$errors =  array('error' => $this->upload->display_errors());
+				$array['error'] = $errors;
+			}else{
+				$data =  array('upload_data' => $this->upload->data());
+				//echo $_FILES['userfile']['name'];
+				$this->resizeImage($_FILES['userfile']['name']);
+				$this->db->where(array('user_id'=>$user_id,'tag'=>'image'))->from($this->profile_gallery_images_docs);
+				$query = $this->db->get();
+				$numRow = $query->num_rows();
+				$data = array(
+							'image' => $_FILES['userfile']['name'],
+							'tag' =>$_POST['tag'],
+							'type' =>$_POST['Itype'],
+							'user_id' => $user_id,
+							'created_date' => date("Y-m-d H:i:s")
+						);
+						$result = $this->db->insert($this->profile_gallery_images_docs, $data);
+						$lastID = $this->db->insert_id();
+						$array['id'] =$lastID; 
+						$array['imagecount'] = $numRow; 
+						$array['imagename'] = $_FILES['userfile']['name'];
+						$showpath =base_url()."assets/upload/gallery/thumbnail/";
+						$img .= '<div class="col-md-2" id="'.$lastID.'"><div class="thumbnail">';
+							$img .= '<img class="thumbnail-img" src="'.$showpath.$_FILES['userfile']['name'].'" />';
+							$img .= '<span class="remove-image" onclick="removeimage('.$lastID.')">X</span></div></div>';
+						$array['img'] = $img; 						
+				
+			}
+			return $array;
+		
+		}
+	}
+	public function resizeImage($filename){
+	$source_path = $_SERVER['DOCUMENT_ROOT'] . '/market-place/assets/upload/gallery/' . $filename;
+	$target_path = $_SERVER['DOCUMENT_ROOT'] . '/market-place/assets/upload/gallery/thumbnail/';
+	//$source_path = './assets/img/gallery/' . $filename;
+	//$target_path =  './assets/img/gallery/thumbnail/';
+	
+	 $config_manip = array(
+          'image_library' => 'gd2',
+          'source_image' => $source_path,
+          'new_image' => $target_path,
+          'maintain_ratio' => TRUE,
+          //'create_thumb' => TRUE,
+          //'thumb_marker' => '_thumb',
+          'width' => 150,
+          'height' => 150
+      );
+
+		$this->load->library('image_lib',$config_manip);
+		$this->image_lib->initialize($config_manip);
+      if (!$this->image_lib->resize()) {
+          echo $this->image_lib->display_errors();
+      }
+		$this->image_lib->clear();
+   }
+   
+   function removeimage(){
+		$id = $this->input->post('id');
+		$this->db->where('pmid', $id);
+        return $this->db->delete($this->profile_gallery_images_docs);
+    }
+	function cDocumentGallery(){
+	 $user_id = $this->session->userdata('uid');
+		$array = array();
+		$img = '';
+		set_time_limit(0);
+		ini_set('memory_limit', '-1');
+		if(!empty($_FILES['userfile']["name"])){
+		  $ext = pathinfo($_FILES['userfile']["name"]);
+		  $fileName = rand().'-'.time().'.'.$ext['extension'];
+			$_FILES['userfile']["name"]= 'gallery-'.$fileName;
+			//Upload Image
+			$config['upload_path'] = './assets/upload/gallery/';
+			$config['allowed_types'] = 'gif|jpg|png|pdf|docx|doc';
+			
+			$this->load->library('upload', $config);
+			if(!$this->upload->do_upload('userfile')){
+				$errors =  array('error' => $this->upload->display_errors());
+				$array['error'] = $errors;
+			}else{
+				$data =  array('upload_data' => $this->upload->data());
+				$this->db->where(array('user_id'=>$user_id,'tag'=>'doc'))->from($this->profile_gallery_images_docs);
+				$query = $this->db->get();
+				$numRow = $query->num_rows();
+				$data = array(
+							'image' => $_FILES['userfile']['name'],
+							'tag' =>$_POST['tag'],
+							'type' =>$_POST['Itype'],
+							'user_id' => $user_id,
+							'created_date' => date("Y-m-d H:i:s")
+						);
+						$result = $this->db->insert($this->profile_gallery_images_docs, $data);
+						$lastID = $this->db->insert_id();
+						$array['id'] =$lastID; 
+						$array['imagecount'] = $numRow; 
+						$array['imagename'] = $_FILES['userfile']['name'];
+						$showpath =base_url()."assets/img/";
+						$nameicon = "word.png";
+						$img .= '<div class="col-md-2" id="'.$lastID.'"><div class="thumbnail">';
+							$img .= '<img class="thumbnail-img" src="'.$showpath.$nameicon.'" />';
+							
+							$img .= '<span class="remove-image" onclick="removeimage('.$lastID.')">X</span></div></div>';
+						$array['img'] = $img; 						
+				
+			}
+			return $array;
+		
+		}
+	}
+	public function Gimages(){
+		$user_id = $this->session->userdata('uid');
+		if($this->session->userdata('role')==1){ 
+			$this->db->where(array('user_id'=>$user_id,'tag'=>'image','type'=>'buyer'))->from($this->profile_gallery_images_docs);}
+		if($this->session->userdata('role')==2){ 
+			$this->db->where(array('user_id'=>$user_id,'tag'=>'image','type'=>'buyer'))->from($this->profile_gallery_images_docs);
+		}
+		if($this->session->userdata('role')==3){
+			$this->db->where(array('user_id'=>$user_id,'tag'=>'image','type'=>'seller'))->from($this->profile_gallery_images_docs);	
+		}
+		$query = $this->db->get();
+		return $query->result_array(); 
+    }
+	public function Docimages(){
+		$user_id = $this->session->userdata('uid');
+		if($this->session->userdata('role')==1){ 
+			$this->db->where(array('user_id'=>$user_id,'tag'=>'doc','type'=>'buyer'))->from($this->profile_gallery_images_docs);}
+		if($this->session->userdata('role')==2){ 
+			$this->db->where(array('user_id'=>$user_id,'tag'=>'doc','type'=>'buyer'))->from($this->profile_gallery_images_docs);
+		}
+		if($this->session->userdata('role')==3){
+			$this->db->where(array('user_id'=>$user_id,'tag'=>'doc','type'=>'seller'))->from($this->profile_gallery_images_docs);	
+		}
+		$query = $this->db->get();
+		return $query->result_array(); 
+    }
+		function updateDocName(){
+			$data = array( 'name' => $_POST['doctxt']);
+		    $this->db->where('pmid', $_POST['pmid']);		  
+           return  $this->db->update($this->profile_gallery_images_docs, $data);
+    }
+	function cProofGallery(){
+	 $user_id = $this->session->userdata('uid');
+		$array = array();
+		$img = '';
+		set_time_limit(0);
+		ini_set('memory_limit', '-1');
+		if(!empty($_FILES['userfile']["name"])){
+		  $ext = pathinfo($_FILES['userfile']["name"]);
+		  $fileName = rand().'-'.time().'.'.$ext['extension'];
+			$_FILES['userfile']["name"]= 'gallery-'.$fileName;
+			//Upload Image
+			$config['upload_path'] = './assets/upload/gallery/';
+			$config['allowed_types'] = 'gif|jpg|png|pdf|docx|doc';
+			
+			$this->load->library('upload', $config);
+			if(!$this->upload->do_upload('userfile')){
+				$errors =  array('error' => $this->upload->display_errors());
+				$array['error'] = $errors;
+			}else{
+				$data =  array('upload_data' => $this->upload->data());
+				$this->db->where(array('user_id'=>$user_id,'tag'=>'proof'))->from($this->profile_gallery_images_docs);
+				$query = $this->db->get();
+				$numRow = $query->num_rows();
+				if($numRow > 0){
+					$getdata = $query->row_array(); 
+					$data = array( 'image' => $_FILES['userfile']['name']);
+						$this->db->where('pmid', $getdata['pmid']);		  
+					return  $this->db->update($this->profile_gallery_images_docs, $data);
+				}else{
+					$data = array(
+							'image' => $_FILES['userfile']['name'],
+							'tag' =>$_POST['tag'],
+							'user_id' => $user_id,
+							'created_date' => date("Y-m-d H:i:s")
+						);
+						return $result = $this->db->insert($this->profile_gallery_images_docs, $data);
+						//$lastID = $this->db->insert_id();
+				}
+				
+			}
+			
+		
+		}
+	}
+	function getAllSeller(){
+		$select =$this->users.".*,".$this->profile.".*";	   
+		$this->db->select($select);
+		$this->db->from($this->profile);
+		$this->db->join($this->users, $this->users.'.id =' .$this->profile.'.user_id','left');
+		$this->db->where('role','3');
+		$where =$this->profile.".amount!=''"; 
+		$this->db->where($where);
+		$query = $this->db->get();
+		return $query->result();
+    }
+	function getAllBuyer(){
+		$select =$this->users.".*,".$this->profile.".*";	   
+		$this->db->select($select);
+		$this->db->from($this->profile);
+		$this->db->join($this->users, $this->users.'.id =' .$this->profile.'.user_id','left');
+		$this->db->where('role','2');
+		$where =$this->profile.".amount!=''"; 
+		$this->db->where($where);
+		$query = $this->db->get();
+		return $query->result();
+    }
+	function viewProfile($id){
+		$id = base64_decode($id);
+		$select =$this->users.".*,".$this->profile.".*";	   
+		$this->db->select($select);
+		$this->db->from($this->profile);
+		$this->db->join($this->users, $this->users.'.id =' .$this->profile.'.user_id','left');
+		$this->db->where('user_id',$id);
+		$query = $this->db->get();
+		return $query->row_array();
+    }
+	function Gallery($id){   
+            $query = $this->db->where(array('user_id'=>$id,'tag'=>'image'))->get($this->profile_gallery_images_docs);
+            return $query->result_array(); 
+    }
+	function business_industry(){   
+            $query = $this->db->get($this->business_industry);
+            return $query->result_array(); 
+    }
+	function viewBuyer($id){
+		$id = base64_decode($id);
+		$select =$this->users.".*,".$this->profile.".*";	   
+		$this->db->select($select);
+		$this->db->from($this->profile);
+		$this->db->join($this->users, $this->users.'.id =' .$this->profile.'.user_id','left');
+		$this->db->where('user_id',$id);
+		$query = $this->db->get();
+		return $query->row_array();
+    }
+	public function buyerDocimages($id){
+		$id = base64_decode($id);
+		$this->db->where(array('user_id'=>$id,'tag'=>'doc'))->from($this->profile_gallery_images_docs);
+		$query = $this->db->get();
+		return $query->result_array(); 
+    }
+	public function sellerDocimages($id){
+		$id = base64_decode($id);
+		$this->db->where(array('user_id'=>$id,'tag'=>'doc'))->from($this->profile_gallery_images_docs);
+		$query = $this->db->get();
+		return $query->result_array(); 
+    }
+	 function getUserdataById(){
+		 $query =  $this->db->where('user_id', $this->session->userdata('uid'))->get($this->profile);
+        return $query->row_array();
+    }
+}
+?>

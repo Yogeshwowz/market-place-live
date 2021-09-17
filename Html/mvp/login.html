@@ -1,0 +1,101 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MVP</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/carousel.css?v=1.1">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=1.1">
+    
+  </head>
+  <body>
+
+    <section class="login-section">
+        <div class="container">
+            <div class="row">
+                <div class="user_forms d-flex flex-column justify-content-center align-items-center">
+                    <div class="user_forms_body">
+                        <a class="close_form" href="index.html">X</a>
+                        <ul class="nav nav-tabs">
+                            <li><a href="#social_form" data-toggle="tab">SOCIAL</a></li>
+                            <li  class="active"><a class="active" href="#login_form" data-toggle="tab">LOGIN</a></li>
+                            <li><a href="#register_form" data-toggle="tab">REGISTER</a></li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade" id="social_form">
+                                <form >
+                                    <h6 class="text-center pb-4">SOCIAL PROFILES</h6>
+                                    <select class="select_menu mb-4" id="select_profile">
+                                        <option value="0" selected>Choose Your Profile</option>
+                                        <option value="1">As a Investor</option>
+                                        <option value="2">As a Buyer</option>
+                                        <option value="3" >As a Seller</option>
+                                    </select>
+                                    <select class="select_menu mb-3" id="select_country">
+                                        <option value="0" selected>Country</option>
+                                        <option value="1">Singapore</option>
+                                        <option value="2">USA</option>
+                                        <option value="3">Canada</option>
+                                        <option value="4">australia</option>
+                                    </select>
+                                    <a href="#" class="google btn">
+                                        <h5 class="m-0"><i class="fa fa-google-plus"></i> Login with Google+</h5>
+                                    </a>
+                                    <a href="#" class="fb btn">
+                                      <h5 class="m-0"><i class="fa fa-facebook"></i> Login with Facebook</h5>
+                                     </a>                                    
+                                </form>
+                            </div>
+                            <div class="tab-pane active in" id="login_form">
+                                <form >
+                                    <input class="mb-4" type="email" name="email" placeholder="Email">
+                                    <input class="mb-3" type="password" name="password" placeholder="Password">
+                                    <div class="float-right">
+                                        <p><a href="forget-password.html">Forget Your Password?</a></p>
+                                    </div>
+                                    <a href="dashboard.html"><button class="login_btn main-btn1 w-100 mt-5">Login</button></a>
+                                </form>                
+                            </div>
+                            <div class="tab-pane fade" id="register_form">
+                                <form>
+                                    <input class="mb-4" type="email" name="email" placeholder="Email">
+                                    <input class="mb-4" type="password" name="password" placeholder="Password">
+                                    <input class="mb-4" type="password" name="password" placeholder="Confirm Password">
+                                    <select class="select_menu mb-4" id="select_profile">
+                                        <option value="0" selected>Choose Your Profile</option>
+                                        <option value="1">As a Investor</option>
+                                        <option value="2">As a Buyer</option>
+                                        <option value="3" >As a Seller</option>
+                                    </select>
+                                    <select class="select_menu" id="select_country">
+                                        <option value="0" selected>Country</option>
+                                        <option value="1">Singapore</option>
+                                        <option value="2">USA</option>
+                                        <option value="3">Canada</option>
+                                        <option value="4">australia</option>
+                                    </select>
+                                    <a href="dashboard.html"><button class="register_btn main-btn1 w-100 mt-4">Verify Email</button></a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="assets/js/slick.js" type="text/javascript" charset="utf-8"></script>    
+  </body>
+</html>

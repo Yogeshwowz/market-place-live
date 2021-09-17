@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MVP</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/carousel.css?v=1.1">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=1.1">
+    
+  </head>
+  <body>
+
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light" id="main_header">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Logo</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="buyer-profile.html">Buyer</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="seller-profile.html">Seller</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="investor-profile.html">Investor</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact</a>
+                      </li>
+                    </ul>
+                    <div class="ml-auto d-flex align-items-center">
+                        <ul class="navbar-nav User_nav_login d-none">
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html"><i class="fa fa-lock" aria-hidden="true"></i> Login</a>
+                            </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">|</a>
+                              </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html"><i class="fa fa-user" aria-hidden="true"></i> Register</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">                        
+                            <input class="mr-sm-2 nav_search ml-md-3" type="search" placeholder="Businesses for sale in Singapore" aria-label="Search">
+                            <a href="search-result.html" class="btn nav_search_btn my-2 my-sm-0"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </form>
+                        <div class="dropdown mr-1">
+                                <button class="btn bg_main text-white dropdown-toggle px-4" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Profile</button>
+                                <div class="dropdown-menu profile_dropdown p-0" aria-labelledby="dropdownMenuButton">
+                                    <div class="row p-3">
+                                        <div class="col-md-4 pr-0">
+                                            <div class="drop_profile_img">
+                                                <!-- <img class="profile_img w-100" src="assets/img/user.png"> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p>name name</p>
+                                            <p class="color_blue">example123@gmail.com</p>
+                                            <a class="save_change d-block text-center bg_main br_10 p-2 mt-2" href="dashboard.html">My Dashboard</a>
+                                        </div>
+                                    </div>
+                                    <a class="dropdown-item" href="invoices.html"><i class="fa fa-calculator pr-2" aria-hidden="true"></i>Invoices</a>
+                                    <a class="dropdown-item" href="bookmark.html"><i class="fa fa-bookmark pr-2" aria-hidden="true"></i>Bookmarks & History</a>
+                                    <a class="dropdown-item" href="notifications.html"><i class="fa fa-bell pr-2" aria-hidden="true"></i>Notification</a>
+                                    <a class="dropdown-item" href="setting.html"><i class="fa fa-bell pr-2" aria-hidden="true"></i>Settings</a>
+                                    <a class="dropdown-item" href="index.html"><i class="fa fa-minus-circle pr-2" aria-hidden="true"></i>Logout</a>
+                                </div>
+                            </div>
+                            <div class="login_user d-flex justify-content-center align-items-center">
+                                <img class="" src="assets/img/user.png">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="investor_single_page">    
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="main_box bg_white my-4 w-100">
+                        <div class="p_20">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="comapny_img">
+                                        <img src="assets/img/calculator.jpg" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <h5 class="color_blue pb-1">Lorem Ipsum is simply dummy</h5>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <ul class="latest_share d-flex m-0 pt-1">
+                                        <li><a href="#"><i class="fa fa-envelope-o pr-2" aria-hidden="true"></i>Official Email</a></li>
+                                        <li><a href="#"><i class="fa fa-phone pr-2" aria-hidden="true"></i>Phone</a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus-square pr-2" aria-hidden="true"></i>Google+</a></li>
+                                    </ul>
+                                </div>
+                            </div>                            
+                        </div>
+                        <hr class="latest_line m-0">
+                        <div class="activity_body d-flex flex-column p_20">
+                            <div class="img_galary py-3">
+                                <div class="row">
+                                    <div class="col-md-4 pb-3">
+                                        <img class="img-fluid" src="assets/img/banner.jpg">
+                                    </div>
+                                    <div class="col-md-4 pb-3">
+                                        <img class="img-fluid" src="assets/img/banner.jpg">
+                                    </div>
+                                    <div class="col-md-4 pb-3">
+                                        <img class="img-fluid" src="assets/img/banner.jpg">
+                                    </div>
+                                    <div class="col-md-4 pb-3">
+                                        <img class="img-fluid" src="assets/img/banner.jpg">
+                                    </div>
+                                    <div class="col-md-4 pb-3">
+                                        <img class="img-fluid" src="assets/img/banner.jpg">
+                                    </div>
+                                    <div class="col-md-4 pb-3">
+                                        <img class="img-fluid" src="assets/img/banner.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <h6 class="pb-2 ">All Formats</h6>
+                            <table class="table table-bordered all_formats">
+                                <thead>
+                                  <tr>
+                                    <th>Format</th>
+                                    <th>Investment</th>
+                                    <th>Brand Fee</th>
+                                    <th>Staff</th>
+                                    <th>Exp. Monthly Sales</th>
+                                    <th>Profit Margin</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Sales Partner</td>
+                                    <td>INR 10 lakh - 1 crore</td>
+                                    <td>INR 5 Lakh</td>
+                                    <td>2</td>
+                                    <td>INR 20 lakh</td>
+                                    <td>10%</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            <h6 class="pb-2">Documents</h6>
+                            <ul class="pb-2 document_ul">
+                                <li><a href="#"><i class="fa fa-file-pdf-o pr-2" aria-hidden="true"></i> Company Profile </a></li>
+                                <li><a href="#"><i class="fa fa-file-pdf-o pr-2" aria-hidden="true"></i> Catalog</a></li>
+                                <li><a href="#"><i class="fa fa-file-pdf-o pr-2" aria-hidden="true"></i>Certificate </a></li>
+                            </ul>
+                            <h6 class="pb-2 pt-4">About Engineers</h6>
+                            <p class="pb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. pt-4</p>
+                            <p class="pb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                            <h6 class="pb-2 pt-4">Products and Services</h6>
+                            <p class="pb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h6 class="pb-2 pt-4">Preferred Locations</h6>
+                            <p class="pb-2">Andhra Pradesh, Arunachal Pradesh, Assam, Bihar, Chandigarh, Chhattisgarh, Dadra and Nagar Haveli</p>
+                            <h6 class="pb-2 pt-4">How to become Engineers Sales Partner?</h6>
+                            <p class="pb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h6 class="pb-2" pt-4>What are some of the things we look for in a Sales Partner?</h6>
+                             <p class="pb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+                            <h6 class="pb-2 pt-4">Support you can expect from the company</h6>
+                            <p class="pb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                            <h6 class="pb-2 pt-4">Profile Stats</h6>
+                            <div class="pb-2 d-flex">
+                                <p class="pr-3"><i class="fa fa-users pr-2" aria-hidden="true"></i> 1000+ Page Views</p>
+                                <p><i class="fa fa-user-o pr-2" aria-hidden="true"></i> 1000+ Investor Views</p>
+                            </div>
+                            <p class="single_disclaimer">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="main_box bg_white my-4 w-100">
+                        <h5 class="business_left_top_heading">Send Business Proposal</h5>
+                        <div class="activity_body d-flex flex-column p_20">                            
+                            <p class="py-2 text-center">To engage serious businesses, sending proposals is allowed only on premium plans.</p>
+                            <button class="user_btn mx-auto my-2">Update Investor Profile</button>
+                        </div> 
+                        <ul class="single_user_btn">
+                            <li><a href="#"><i class="fa fa-bookmark pr-3" aria-hidden="true"></i>Bookmark</a></li>
+                            <li><a href="#"><i class="fa fa-share-square-o pr-3" aria-hidden="true"></i>Share</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container-fluid py-4">
+        <p>You might also be interested in these members</p>
+            <div class="customer-logos slider" id="c">
+                <div class="slide">
+                    <a href="business-single-page.html">
+                        <div class="main_box bottom_slider bg_white my-4 w-100">
+                            <div class="activity_body d-flex flex-column p_20">
+                                <p class="color_blue"><b>For Sale: Award-winning well-established</b></p>  
+                                <ul class="latest_share w-100 d-flex py-3">
+                                    <li><a href="#"><i class="fa fa-envelope-o pr-1" aria-hidden="true"></i>Official Email</a></li>
+                                    <li><a href="#"><i class="fa fa-phone pr-1" aria-hidden="true"></i>Phone</a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus-square pr-1" aria-hidden="true"></i>Google +</a></li>
+                                </ul>
+                                <p class="pb-2">Prior to the pandemic, we had at least 100 members registered on average. At present, the gym has recently reopened and we have 40 members; the numbers of registered members are increasing steadily. We have a customer databasve comprising of 800+ members.</p>
+                                <ul class="latest_share d-flex py-3 m-0">
+                                    <li><a href="#"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>Chennai</a></li>
+                                </ul>
+                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                <p>Run Rate Sales</p>
+                                <p><span>INR</span> 1.4 crore</p>
+                                </div>
+                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                    <p>EBIDTA Margin</p>
+                                    <p>25 %</p>
+                                </div>
+                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                    <p>Business for Sale</p>
+                                    <p><span>INR</span> 36 lakh</p>
+                                </div>
+                                <button class="user_btn ml-auto my-2">Contact Business</button>
+                            </div> 
+                        </div>
+                    </a>
+                </div>        
+                <div class="slide">
+                    <a href="business-single-page.html">
+                        <div class="main_box bottom_slider bg_white my-4 w-100">
+                            <div class="activity_body d-flex flex-column p_20">
+                                <p class="color_blue"><b>For Sale: Award-winning well-established</b></p>  
+                                <ul class="latest_share w-100 d-flex py-3">
+                                    <li><a href="#"><i class="fa fa-envelope-o pr-1" aria-hidden="true"></i>Official Email</a></li>
+                                    <li><a href="#"><i class="fa fa-phone pr-1" aria-hidden="true"></i>Phone</a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus-square pr-1" aria-hidden="true"></i>Google +</a></li>
+                                </ul>
+                                <p class="pb-2">Prior to the pandemic, we had at least 100 members registered on average. At present, the gym has recently reopened and we have 40 members; the numbers of registered members are increasing steadily. We have a customer databasve comprising of 800+ members.</p>
+                                <ul class="latest_share d-flex py-3 m-0">
+                                    <li><a href="#"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>Chennai</a></li>
+                                </ul>
+                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                <p>Run Rate Sales</p>
+                                <p><span>INR</span> 1.4 crore</p>
+                                </div>
+                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                    <p>EBIDTA Margin</p>
+                                    <p>25 %</p>
+                                </div>
+                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                    <p>Business for Sale</p>
+                                    <p><span>INR</span> 36 lakh</p>
+                                </div>
+                                <button class="user_btn ml-auto my-2">Contact Business</button>
+                            </div> 
+                        </div>
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="business-single-page.html">
+                        <div class="main_box bottom_slider bg_white my-4 w-100">
+                            <div class="activity_body d-flex flex-column p_20">
+                                <p class="color_blue"><b>For Sale: Award-winning well-established</b></p>  
+                                <ul class="latest_share w-100 d-flex py-3">
+                                    <li><a href="#"><i class="fa fa-envelope-o pr-1" aria-hidden="true"></i>Official Email</a></li>
+                                    <li><a href="#"><i class="fa fa-phone pr-1" aria-hidden="true"></i>Phone</a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus-square pr-1" aria-hidden="true"></i>Google +</a></li>
+                                </ul>
+                                <p class="pb-2">Prior to the pandemic, we had at least 100 members registered on average. At present, the gym has recently reopened and we have 40 members; the numbers of registered members are increasing steadily. We have a customer databasve comprising of 800+ members.</p>
+                                <ul class="latest_share d-flex py-3 m-0">
+                                    <li><a href="#"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>Chennai</a></li>
+                                </ul>
+                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                <p>Run Rate Sales</p>
+                                <p><span>INR</span> 1.4 crore</p>
+                                </div>
+                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                    <p>EBIDTA Margin</p>
+                                    <p>25 %</p>
+                                </div>
+                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                    <p>Business for Sale</p>
+                                    <p><span>INR</span> 36 lakh</p>
+                                </div>
+                                <button class="user_btn ml-auto my-2">Contact Business</button>
+                            </div> 
+                        </div>
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="business-single-page.html">
+                        <div class="main_box bottom_slider bg_white my-4 w-100">
+                            <div class="activity_body d-flex flex-column p_20">
+                                <p class="color_blue"><b>For Sale: Award-winning well-established</b></p>  
+                                <ul class="latest_share w-100 d-flex py-3">
+                                    <li><a href="#"><i class="fa fa-envelope-o pr-1" aria-hidden="true"></i>Official Email</a></li>
+                                    <li><a href="#"><i class="fa fa-phone pr-1" aria-hidden="true"></i>Phone</a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus-square pr-1" aria-hidden="true"></i>Google +</a></li>
+                                </ul>
+                                <p class="pb-2">Prior to the pandemic, we had at least 100 members registered on average. At present, the gym has recently reopened and we have 40 members; the numbers of registered members are increasing steadily. We have a customer databasve comprising of 800+ members.</p>
+                                <ul class="latest_share d-flex py-3 m-0">
+                                    <li><a href="#"><i class="fa fa-map-marker pr-2" aria-hidden="true"></i>Chennai</a></li>
+                                </ul>
+                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                <p>Run Rate Sales</p>
+                                <p><span>INR</span> 1.4 crore</p>
+                                </div>
+                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                    <p>EBIDTA Margin</p>
+                                    <p>25 %</p>
+                                </div>
+                                <div class="d-flex justify-content-between bg_color p-2 mb_2">
+                                    <p>Business for Sale</p>
+                                    <p><span>INR</span> 36 lakh</p>
+                                </div>
+                                <button class="user_btn ml-auto my-2">Contact Business</button>
+                            </div> 
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    <footer class="footer">
+        <div class="upper_footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4>Company</h4>
+                        <ul class="footer_list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="about-us.html">How To?</a></li>
+                            <li><a href="about-us.html">Blog</a></li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                        </ul>
+                    </div>                           
+                    <div class="col-md-3">
+                        <h4>Get Started</h4>
+                        <ul class="footer_list">
+                            <li><a href="seller-profile.html">Sell your Business</a></li>
+                            <li><a href="buyer-profile.html">Buy a Business</a></li>
+                            <li><a href="investor-profile.html">Invest in a Business</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h4>Follow Us </h4>
+                        <ul class="footer_list follow_us_list d-flex justify-content-between mt-md-2">
+                            <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        </ul>                                
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="pb-4">Let's have a chat !</h4>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter your E-mail" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-success" type="button" id="button-addon2"> <b>Submit</b></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lower_footer">
+            <p class="m-0 text-white text-center">Copyright © 2020 xyz Online Services Private Limited. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="assets/js/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/js/customJS.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html> 

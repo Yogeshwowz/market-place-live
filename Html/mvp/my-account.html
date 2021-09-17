@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MVP</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/carousel.css?v=1.1">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=1.1">
+    
+  </head>
+  <body class="bg_color">
+
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg  navbar-light">
+            <div class="container-fluid">
+                <div class="top-nav">
+                    <div class="nav-search">
+                        <form class="form-inline my-2 my-lg-0">
+                          <input class="" type="search" placeholder="Ex : Businesses for sale in india" aria-label="Search">
+                          <a href="search-result.html" class="btn nav_search my-2 my-sm-0"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </form>
+                    </div>
+                    <div class="topnav-right ml-auto">
+                        <div class=" d-flex justify-content-between align-items-center pb-3">
+                            <p><a href="bookmark.html"><i class="fa fa-bookmark pr-3" aria-hidden="true"></i></a></p>
+                            <p><a href="notifications.html"><i class="fa fa-bell pr-3" aria-hidden="true"></i></a></p>
+                            <div class="dropdown mr-3">
+                                <button class="btn bg_main2 text-white dropdown-toggle px-4" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Profile</button>
+                                <div class="dropdown-menu profile_dropdown p-0" aria-labelledby="dropdownMenuButton">
+                                    <div class="row p-3">
+                                        <div class="col-md-4 pr-0">
+                                            <div class="drop_profile_img">
+                                                <!-- <img class="profile_img w-100" src="assets/img/user.png"> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p>name name</p>
+                                            <p class="color_blue">example123@gmail.com</p>
+                                            <a class="save_change d-block text-center bg_main br_10 p-2 mt-2" href="dashboard.html">My Dashboard</a>
+                                        </div>
+                                    </div>
+                                    <a class="dropdown-item" href="invoices.html"><i class="fa fa-calculator pr-2" aria-hidden="true"></i>Invoices</a>
+                                    <a class="dropdown-item" href="bookmark.html"><i class="fa fa-bookmark pr-2" aria-hidden="true"></i>Bookmarks & History</a>
+                                    <a class="dropdown-item" href="notifications.html"><i class="fa fa-bell pr-2" aria-hidden="true"></i>Notification</a>
+                                    <a class="dropdown-item" href="setting.html"><i class="fa fa-bell pr-2" aria-hidden="true"></i>Settings</a>
+                                    <a class="dropdown-item" href="index.html"><i class="fa fa-minus-circle pr-2" aria-hidden="true"></i>Logout</a>
+                                </div>
+                            </div>
+                            <div class="login_user d-flex justify-content-center align-items-center">
+                                <img class="" src="assets/img/user.png">
+                            </div>
+                        </div>
+                        <p>Logged in as abc123@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light main_line">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Logo</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="my-account.html">My Account</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>       
+    </header>
+
+    <section class="setting_page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="nav flex-column nav-pills" id="my_account_tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="basic-info" data-toggle="pill" href="#basic-info-tab" role="tab" aria-controls="basic-info-tab" aria-selected="false">Basic Information</a>
+                        <a class="nav-link" id="invoices" data-toggle="pill" href="#invoices-tab" role="tab" aria-controls="invoices-tab" aria-selected="false"><i class="fa fa-calculator pr-2" aria-hidden="true"></i>Invoices</a>
+                        <a class="nav-link" id="bookmark-history" data-toggle="pill" href="#bookmark-history-tab" role="tab" aria-controls="bookmark-history-tab" aria-selected="false"><i class="fa fa-bookmark pr-2" aria-hidden="true"></i> Bookmarks & History</a>
+                        <a class="nav-link" id="notification" data-toggle="pill" href="#notification-tab" role="tab" aria-controls="notification-tab" aria-selected="false"><i class="fa fa-bell pr-2" aria-hidden="true"></i>Notification</a>
+                        <a class="nav-link" href="#"><i class="fa fa-cog pr-2" aria-hidden="true"></i>Settings</a>
+                        <a class="nav-link" id="contact-billing" data-toggle="pill" href="#contact-billing-tab" role="tab" aria-controls="contact-billing-tab" aria-selected="false"><i class="fa fa-circle" aria-hidden="true"></i>Contact & Billing</a>
+                        <a class="nav-link" id="deal-preference" data-toggle="pill" href="#deal-preference-tab" role="tab" aria-controls="deal-preference-tab" aria-selected="false"><i class="fa fa-circle" aria-hidden="true"></i>Deal Preferences</a>
+                        <a class="nav-link" id="change-password" data-toggle="pill" href="#change-password-tab" role="tab" aria-controls="change-password-tab" aria-selected="false"><i class="fa fa-circle" aria-hidden="true"></i>Change Password</a>
+                        <a class="nav-link" href="index.html"><i class="fa fa-minus-circle pr-2" aria-hidden="true"></i>Logout</a>                 
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content" id="my_account_tabContent">
+                        <div class="tab-pane fade show active" id="basic-info-tab" role="tabpanel" aria-labelledby="basic-info">
+                            <div class="setting_box">
+                                <h6 class="pb-2">Basic Information</h6>
+                                <form class="">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="w-100 mb-2" for="name">Name</label>
+                                            <input class="w-100 py-2" type="text" name="name" placeholder="">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="w-100 mb-2" for="Mobile-number">Mobile Number</label>
+                                            <input class="w-100 py-2" type="number" name="Mobile-number" placeholder="">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="w-100 mb-2" for="location">Location</label>
+                                            <input class="w-100 py-2" type="text" name="location" placeholder="">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="w-100 mb-2" for="timezone">Timezone</label>
+                                            <input class="w-100 py-2" type="text" name="timezone" placeholder="">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="w-100 mb-2" for="company_name">Company Name</label>
+                                            <input class="w-100 py-2" type="text" name="company_name" placeholder="">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="w-100 mb-2" for="designation">Designation</label>
+                                            <input class="w-100 py-2" type="text" name="designation" placeholder="">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="w-100 mb-2" for="gst_number">GST Number</label>
+                                            <input class="w-100 py-2" type="number" name="gst_number" placeholder="">
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <label class="w-100 mb-2" for="address">Address</label>
+                                            <input class="w-100 py-2" type="text" name="address" placeholder="">
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <button class="save_change bg_main br_10 py-3">Save Changes</button>
+                                        </div>                                    
+                                    </div>                                      
+                                </form>
+                            </div>
+                            <div class="main_box my-4 w-100">                            
+                                <div class="activity_body d-flex flex-column p_20 px_40">
+                                    <h6 class="pb-2">Bookmarks</h6>
+                                    <a href="business-single-page.html"><h5 class="color_blue w_88">Component manufacturers for a range of industries run by highly qualified and experienced promoters.</h5></a>
+                                    <div class="row my-4">
+                                        <div class="col-md-3 pr-md-4">
+                                            <a href="business-single-page.html"><img class="img-fluid" src="assets/img/about-us.jpg"></a>
+                                        </div>
+                                        <div class="col-md-8 pl-md-4">
+                                            <p><b>Description : </b>Family owned business established in 1969 engaged in manufacturing industry. - An ISO 9001:2008 & TS 16949 certified company recognized by the industry for quality and delivery excellence.</p>
+                                            <div class="d-flex justify-content-between pt-4">
+                                                <div class="left_side">
+                                                    <h5>Full Sale</h5>
+                                                    <p>INR 25 crore</p>
+                                                </div>
+                                                <div class="right_side pr-1">
+                                                    <h5>Run Rate Revenue</h5>
+                                                    <p>INR 24 crore @ 20 % EBITDA</p>
+                                                </div>                                
+                                            </div>
+                                        </div>
+                                    </div>                            
+                                    <button class="user_btn ml-auto my-2"><a href="business-single-page.html">Contact Business</a></button>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="invoices-tab" role="tabpanel" aria-labelledby="invoices">
+                            <div class="main_box mb-4">
+                                <div class="p_20 px_40">
+                                    <h4>Invoices</h4>
+                                </div>
+                                <div class="box_body main_line p_20 px_40">
+                                    <p>You have not shortlisted any profiles yet.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="bookmark-history-tab" role="tabpanel" aria-labelledby="bookmark-history">                            
+                            <div class="main_box mb-4">
+                                <div class="p_20 px_40">
+                                    <h4>Bookmarks</h4>
+                                </div>
+                                <div class="box_body main_line p_20 px_40">
+                                    <p>You have not shortlisted any profiles yet.</p>
+                                </div>
+                            </div>
+
+                            <div class="main_box px_40 py-3 br_10 mb-4">
+                                <h4 class="m-0">Bookmarks</h4>
+                            </div>
+
+                            <div class="main_box my-4 w-100">
+                                <div class="activity_body d-flex flex-column p_20 px_40">
+                                    <a href="business-single-page.html"><h5 class="color_blue w_88">Component manufacturers for a range of industries run by highly qualified and experienced promoters.</h5></a>
+                                    <div class="row my-4">
+                                        <div class="col-md-3 pr-md-4">
+                                            <a href="business-single-page.html"><img class="img-fluid" src="assets/img/about-us.jpg"></a>
+                                        </div>
+                                        <div class="col-md-8 pl-md-4">
+                                            <p><b>Description : </b>Family owned business established in 1969 engaged in manufacturing industry. - An ISO 9001:2008 & TS 16949 certified company recognized by the industry for quality and delivery excellence.</p>
+                                            <div class="d-flex justify-content-between pt-4">
+                                                <div class="left_side">
+                                                    <h5>Full Sale</h5>
+                                                    <p>INR 25 crore</p>
+                                                </div>
+                                                <div class="right_side pr-1">
+                                                    <h5>Run Rate Revenue</h5>
+                                                    <p>INR 24 crore @ 20 % EBITDA</p>
+                                                </div>                                
+                                            </div>
+                                        </div>
+                                    </div>                            
+                                    <button class="user_btn ml-auto my-2"><a href="business-single-page.html">Contact Business</a></button>
+                                </div> 
+                            </div>
+
+                            <div class="main_box my-4 w-100">
+                                <div class="activity_body d-flex flex-column p_20 px_40">
+                                    <a href="business-single-page.html"><h5 class="color_blue w_88">Component manufacturers for a range of industries run by highly qualified and experienced promoters.</h5></a>
+                                    <div class="row my-4">
+                                        <div class="col-md-3 pr-md-4">
+                                            <a href="business-single-page.html"><img class="img-fluid" src="assets/img/about-us.jpg"></a>
+                                        </div>
+                                        <div class="col-md-8 pl-md-4">
+                                            <p><b>Description : </b>Family owned business established in 1969 engaged in manufacturing industry. - An ISO 9001:2008 & TS 16949 certified company recognized by the industry for quality and delivery excellence.</p>
+                                            <div class="d-flex justify-content-between pt-4">
+                                                <div class="left_side">
+                                                    <h5>Full Sale</h5>
+                                                    <p>INR 25 crore</p>
+                                                </div>
+                                                <div class="right_side pr-1">
+                                                    <h5>Run Rate Revenue</h5>
+                                                    <p>INR 24 crore @ 20 % EBITDA</p>
+                                                </div>                                
+                                            </div>
+                                        </div>
+                                    </div>                            
+                                    <button class="user_btn ml-auto my-2"><a href="business-single-page.html">Contact Business</a></button>
+                                </div> 
+                            </div>
+
+                            <div class="main_box my-4 w-100">
+                                <div class="activity_body d-flex flex-column p_20 px_40">
+                                    <a href="business-single-page.html"><h5 class="color_blue w_88">Component manufacturers for a range of industries run by highly qualified and experienced promoters.</h5></a>
+                                    <div class="row my-4">
+                                        <div class="col-md-3 pr-md-4">
+                                            <a href="business-single-page.html"><img class="img-fluid" src="assets/img/about-us.jpg"></a>
+                                        </div>
+                                        <div class="col-md-8 pl-md-4">
+                                            <p><b>Description : </b>Family owned business established in 1969 engaged in manufacturing industry. - An ISO 9001:2008 & TS 16949 certified company recognized by the industry for quality and delivery excellence.</p>
+                                            <div class="d-flex justify-content-between pt-4">
+                                                <div class="left_side">
+                                                    <h5>Full Sale</h5>
+                                                    <p>INR 25 crore</p>
+                                                </div>
+                                                <div class="right_side pr-1">
+                                                    <h5>Run Rate Revenue</h5>
+                                                    <p>INR 24 crore @ 20 % EBITDA</p>
+                                                </div>                                
+                                            </div>
+                                        </div>
+                                    </div>                            
+                                    <button class="user_btn ml-auto my-2"><a href="business-single-page.html">Contact Business</a></button>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="notification-tab" role="tabpanel" aria-labelledby="notification">                            
+                            <div class="main_box px_40 py-3 br_10 mb-2">
+                                <h5 class="m-0">Notifications</h5>
+                            </div>
+                            <div class="main_box my-4 w-100">
+                                <div class="activity_body d-flex flex-column p_20 px_40">
+                                    <div class="row my-4">
+                                        <div class="col-md-3 pr-md-4">
+                                            <a href="business-single-page.html"><img class="img-fluid" src="assets/img/about-us.jpg"></a>
+                                        </div>
+                                        <div class="col-md-7 pl-md-4">
+                                            <a href="business-single-page.html"><h5 class="color_blue pb-3">Component manufacturers for a range of industries run by highly qualified and experienced promoters.</h5></a>
+                                            <p>Family owned business established in 1969 engaged in manufacturing industry. - An ISO 9001:2008 & TS 16949 certified company recognized by the industry for quality and delivery excellence.</p>
+                                            <div class="d-flex pt-4">
+                                                <h5 class="pr-4">Full Sale</h5>
+                                                <p>INR 25 crore</p>                              
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 p-md-0">
+                                            <p class="post_date">3 Days, 4 Hours ago</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="main_box my-4 w-100">
+                                <div class="activity_body d-flex flex-column p_20 px_40">
+                                    <div class="row my-4">
+                                        <div class="col-md-3 pr-md-4">
+                                            <a href="business-single-page.html"><img class="img-fluid" src="assets/img/about-us.jpg"></a>
+                                        </div>
+                                        <div class="col-md-7 pl-md-4">
+                                            <a href="business-single-page.html"><h5 class="color_blue pb-3">Component manufacturers for a range of industries run by highly qualified and experienced promoters.</h5></a>
+                                            <p>Family owned business established in 1969 engaged in manufacturing industry. - An ISO 9001:2008 & TS 16949 certified company recognized by the industry for quality and delivery excellence.</p>
+                                            <div class="d-flex pt-4">
+                                                <h5 class="pr-4">Full Sale</h5>
+                                                <p>INR 25 crore</p>                              
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 p-md-0">
+                                            <p class="post_date">3 Days, 4 Hours ago</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="main_box my-4 w-100">
+                                <div class="activity_body d-flex flex-column p_20 px_40">
+                                    <div class="row my-4">
+                                        <div class="col-md-3 pr-md-4">
+                                            <a href="business-single-page.html"><img class="img-fluid" src="assets/img/about-us.jpg"></a>
+                                        </div>
+                                        <div class="col-md-7 pl-md-4">
+                                            <a href="business-single-page.html"><h5 class="color_blue pb-3">Component manufacturers for a range of industries run by highly qualified and experienced promoters.</h5></a>
+                                            <p>Family owned business established in 1969 engaged in manufacturing industry. - An ISO 9001:2008 & TS 16949 certified company recognized by the industry for quality and delivery excellence.</p>
+                                            <div class="d-flex pt-4">
+                                                <h5 class="pr-4">Full Sale</h5>
+                                                <p>INR 25 crore</p>                              
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 p-md-0">
+                                            <p class="post_date">3 Days, 4 Hours ago</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact-billing-tab" role="tabpanel" aria-labelledby="contact-billing">
+                            <div class="setting_box">
+                                <h6>Contact & Billing</h6>
+                                <hr class="mb-4">
+                                <form class="">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="w-100 mb-2" for="name">Name</label>
+                                            <input class="w-100 py-2" type="text" name="name" placeholder="">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="w-100 mb-2" for="Mobile-number">Mobile Number</label>
+                                            <input class="w-100 py-2" type="number" name="Mobile-number" placeholder="">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="w-100 mb-2" for="location">Location</label>
+                                            <input class="w-100 py-2" type="text" name="location" placeholder="">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="w-100 mb-2" for="timezone">Timezone</label>
+                                            <input class="w-100 py-2" type="text" name="timezone" placeholder="">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="w-100 mb-2" for="company_name">Company Name</label>
+                                            <input class="w-100 py-2" type="text" name="company_name" placeholder="">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="w-100 mb-2" for="designation">Designation</label>
+                                            <input class="w-100 py-2" type="text" name="designation" placeholder="">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="w-100 mb-2" for="gst_number">GST Number</label>
+                                            <input class="w-100 py-2" type="number" name="gst_number" placeholder="">
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <label class="w-100 mb-2" for="address">Address</label>
+                                            <input class="w-100 py-2" type="text" name="address" placeholder="">
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <button class="save_change bg_main br_10 py-3">Save Changes</button>
+                                        </div>                                    
+                                    </div>                                      
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="deal-preference-tab" role="tabpanel" aria-labelledby="deal-preference">
+                            <div class="setting_box">
+                                <h6>Contact & Billing</h6>
+                                <hr class="mb-4">
+                                <form class="">
+                                    <div class="row">                                    
+                                        <div class="col-md-12 mb-3">
+                                            <label class="w-100 mb-2" for="location">Locations</label>
+                                            <input class="w-100 py-2" type="text" name="location" placeholder="">
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <label class="w-100 mb-2" for="industries">Industries</label>
+                                            <input class="w-100 py-2" type="text" name="industries" placeholder="">
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <button class="save_change bg_main br_10 py-3">Save Changes</button>
+                                        </div>                                    
+                                    </div>                                      
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="change-password-tab" role="tabpanel" aria-labelledby="change-password">
+                            <div class="setting_box">
+                                <h6>Change Password</h6>
+                                <hr class="mb-4">
+                                <a href="change-password.html"><button class="change_pass_btn"><i class="fa fa-pencil pr-3" aria-hidden="true"></i> change password</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="upper_footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Company</h4>
+                                <ul class="footer_list">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about-us.html">About US</a></li>
+                                    <li><a href="contact-us.html">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="row">                            
+                            <div class="col-md-4">
+                                <h4>Get Started</h4>
+                                <ul class="footer_list">
+                                    <li><a href="seller-profile.html">Sell your Business</a></li>
+                                    <li><a href="buyer-profile.html">Buy a Business</a></li>
+                                    <li><a href="investor-profile.html">Invest in a Business</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <h4>Follow Us On </h4>
+                                <ul class="footer_list d-flex justify-content-between mt-md-5">
+                                    <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                </ul>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lower_footer">
+            <p class="m-0">Copyright © 2020 xyz Online Services Private Limited. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="assets/js/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        /****************** Start JS For logo crousal *********************/
+
+        $(document).ready(function(){
+            $('.customer-logos').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: true,
+                dots: false,
+                    pauseOnHover: false,
+                    responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }, {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        });
+
+/****************** End JS For logo crousal *********************/
+    </script>
+  </body>
+</html>

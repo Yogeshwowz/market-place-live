@@ -1,0 +1,76 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<style>
+
+input#amount, input#amount-mob, input#amount2, input#amount2-mob {
+    width: 90px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.ui-widget.ui-widget-content {
+    border: 1px solid #c5c5c5;
+    width: 290px;
+    margin-right: 10px;
+    margin-left: 0;
+    border-radius: 0px;
+    background-color: #D5D5D5;
+}
+</style>
+
+<div class="price-range">
+    <table>
+      <tr>
+        <td>
+         <input type="text" id="amount" readonly >
+        </td>
+        <td>
+        <div id="slider-range"></div>
+        </td>
+        <td> 
+        <input type="text" id="amount2" readonly>
+        </td>
+        </tr>
+      </table>
+                           
+  </div>
+  
+  <script>
+  
+   $( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 40,
+      max: 400,
+      step: 10,
+      values: [ 100, 250 ],
+      slide: function( event, ui ) {
+
+    if (ui.values[0] < 100 ){
+        $( "#amount" ).val( ui.values[ 0 ]+"K AED");
+        $( "#amount2" ).val( ui.values[ 1 ]+"M AED" );
+
+     } 
+
+
+     if (ui.values[1] < 100 ){
+        $( "#amount" ).val( ui.values[ 0 ]+"K AED");
+        $( "#amount2" ).val( ui.values[ 1 ]+"K AED" );
+
+     } 
+
+     if (ui.values[0] > 100 ){
+        $( "#amount" ).val( ui.values[ 0 ]+"M AED");
+        $( "#amount2" ).val( ui.values[ 1 ]+"M AED" );
+     } 
+      
+
+      } 
+    });
+
+    $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 )+"K AED");
+    $( "#amount2" ).val( $( "#slider-range" ).slider( "values", 1 )+"M AED" );
+  } )
+  
+  </script>

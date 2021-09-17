@@ -1,0 +1,130 @@
+<?php if(!defined('BASEPATH')) exit('No direct script access allowed');
+
+class Dashboard_model extends CI_Model{
+    
+    protected $users = 'users';
+    protected $countries = 'countries';
+	protected $profile = 'profile';
+	public function __construct(){
+			parent::__construct();
+			$this->load->database();
+	}
+    
+   function getUserById(){
+		$select =$this->users.".*,".$this->countries.".name as countryName";	   
+		$this->db->select($select);
+		$this->db->from($this->users);
+		$this->db->join($this->countries, $this->countries.'.id =' .$this->users.'.country_id','left');
+		$this->db->where($this->users.'.id', $this->session->userdata('uid'));
+		$query = $this->db->get();
+		return $query->row_array();
+    }
+	public function updateProfile(){
+		 if(!empty($_FILES['add_photo']["name"])){
+				$ext = pathinfo($_FILES['add_photo']["name"]);
+				$fileName = rand().'-'.time().'.'.$ext['extension'];
+				$_FILES['add_photo']["name"]= 'gallery-'.$fileName;
+				$add_photo = $_FILES['add_photo']["name"];
+				$config['upload_path'] = './assets/upload/gallery/';
+			    $config['allowed_types'] = 'gif|jpg|png';
+				$this->load->library('upload', $config);
+				if(!$this->upload->do_upload('add_photo')){
+				$errors =  array('error' => $this->upload->display_errors());
+				$array['error'] = $errors;
+				}else{
+					$data =  array('upload_data' => $this->upload->data());
+				}
+		   }
+		   if(!empty($_FILES['add_documents']["name"])){
+				$ext = pathinfo($_FILES['add_documents']["name"]);
+				$fileName = rand().'-'.time().'.'.$ext['extension'];
+				$_FILES['add_documents']["name"]= 'gallery-'.$fileName;
+				$add_documents = $_FILES['add_documents']["name"];
+				$config['upload_path'] = './assets/upload/gallery/';
+			    $config['allowed_types'] = 'gif|jpg|png';
+				$this->load->library('upload', $config);
+				if(!$this->upload->do_upload('add_documents')){
+				$errors =  array('error' => $this->upload->display_errors());
+				$array['error'] = $errors;
+				}else{
+					$data =  array('upload_data' => $this->upload->data());
+				}
+		   }
+		    if(!empty($_FILES['attach_proof']["name"])){
+				$ext = pathinfo($_FILES['attach_proof']["name"]);
+				$fileName = rand().'-'.time().'.'.$ext['extension'];
+				$_FILES['attach_proof']["name"]= 'gallery-'.$fileName;
+				$attach_proof = $_FILES['attach_proof']["name"];
+				$config['upload_path'] = './assets/upload/gallery/';
+			    $config['allowed_types'] = 'gif|jpg|png';
+				$this->load->library('upload', $config);
+				if(!$this->upload->do_upload('attach_proof')){
+				$errors =  array('error' => $this->upload->display_errors());
+				$array['error'] = $errors;
+				}else{
+					$data =  array('upload_data' => $this->upload->data());
+				}
+		   }
+		   if(!empty($_FILES['company_logo']["name"])){
+				$ext = pathinfo($_FILES['company_logo']["name"]);
+				$fileName = rand().'-'.time().'.'.$ext['extension'];
+				$_FILES['company_logo']["name"]= 'gallery-'.$fileName;
+				$company_logo = $_FILES['company_logo']["name"];
+				$config['upload_path'] = './assets/upload/gallery/';
+			    $config['allowed_types'] = 'gif|jpg|png';
+				$this->load->library('upload', $config);
+				if(!$this->upload->do_upload('company_logo')){
+				$errors =  array('error' => $this->upload->display_errors());
+				$array['error'] = $errors;
+				}else{
+					$data =  array('upload_data' => $this->upload->data());
+				}
+		   }
+		   $data = array(
+							'first_name' => $_POST['your_name'],
+							'user_phone' => $_POST['mobile_number']
+						);
+			$this->db->where('id', $this->session->userdata('uid'));		  
+            $this->db->update($this->users, $data);
+			 $updatedata = array(
+							'official_email' => $_POST['official_email'],
+							'field_1' => $_POST['field_1'],
+							'field_2' => $_POST['field_2'],
+							'field_3' => $_POST['field_3'],
+							'field_4' => $_POST['field_4'],
+							'field_5' => $_POST['field_5'],
+							'field_6' => $_POST['field_6'],
+							'field_7' => $_POST['field_7'],
+							'field_8' => $_POST['field_8'],
+							'field_9' => $_POST['field_9']
+							
+						);
+			if($this->session->userdata('role')==1 || $this->session->userdata('role')==2){
+				 $updatedata['interested_in'] = $_POST['interested_in'];
+			}			
+			if($this->session->userdata('role')==3){
+				$updatedata['company_name'] = $_POST['company_name'];
+				$updatedata['field_10'] = $_POST['field_10'];
+				$updatedata['field_11'] = $_POST['field_11'];
+				$updatedata['field_12'] = $_POST['field_12'];
+				$updatedata['field_13'] = $_POST['field_13'];
+				$updatedata['field_14'] = $_POST['field_14'];
+				$updatedata['field_15'] = $_POST['field_15'];
+				$updatedata['field_16'] = $_POST['field_16'];
+				
+				
+			}
+		   $this->db->where('user_id', $this->session->userdata('uid'));		  
+           return  $this->db->update($this->profile, $updatedata);
+    }
+	function getUserProfileById(){
+		$select =$this->users.".*,".$this->profile.".*";	   
+		$this->db->select($select);
+		$this->db->from($this->profile);
+		$this->db->join($this->users, $this->users.'.id =' .$this->profile.'.user_id','left');
+		$this->db->where($this->profile.'.user_id', $this->session->userdata('uid'));
+		$query = $this->db->get();
+		return $query->row_array();
+    }
+}
+?>
